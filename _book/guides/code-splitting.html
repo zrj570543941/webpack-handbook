@@ -1,0 +1,904 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>代码分离(Code Splitting) · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.2">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="lazy-loading.html" />
+    
+    
+    <link rel="prev" href="tree-shaking.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../concepts/">
+            
+                <a href="../concepts/">
+            
+                    
+                    第一部分：概念
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../concepts/entry-points.html">
+            
+                <a href="../concepts/entry-points.html">
+            
+                    
+                    入口起点(Entry Points)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../concepts/output.html">
+            
+                <a href="../concepts/output.html">
+            
+                    
+                    输出(Output)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../concepts/loaders.html">
+            
+                <a href="../concepts/loaders.html">
+            
+                    
+                    加载器(Loaders)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="../concepts/plugins.html">
+            
+                <a href="../concepts/plugins.html">
+            
+                    
+                    插件(Plugins)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="../concepts/configuration.html">
+            
+                <a href="../concepts/configuration.html">
+            
+                    
+                    配置(Configuration)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6" data-path="../concepts/modules.html">
+            
+                <a href="../concepts/modules.html">
+            
+                    
+                    模块(Modules)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7" data-path="../concepts/module-resolution.html">
+            
+                <a href="../concepts/module-resolution.html">
+            
+                    
+                    模块解析(Module Resolution)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.8" data-path="../concepts/dependency-graph.html">
+            
+                <a href="../concepts/dependency-graph.html">
+            
+                    
+                    依赖图表(Dependency Graph)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.9" data-path="../concepts/manifest.html">
+            
+                <a href="../concepts/manifest.html">
+            
+                    
+                    文件清单(Manifest)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.10" data-path="../concepts/targets.html">
+            
+                <a href="../concepts/targets.html">
+            
+                    
+                    构建目标(Targets)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.11" data-path="../concepts/hot-module-replacement.html">
+            
+                <a href="../concepts/hot-module-replacement.html">
+            
+                    
+                    模块热替换(Hot Module Replacement)
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    第二部分：指南
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="installation.html">
+            
+                <a href="installation.html">
+            
+                    
+                    安装
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="getting-started.html">
+            
+                <a href="getting-started.html">
+            
+                    
+                    起步
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="asset-management.html">
+            
+                <a href="asset-management.html">
+            
+                    
+                    管理资源
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="output-management.html">
+            
+                <a href="output-management.html">
+            
+                    
+                    管理输出
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="development.html">
+            
+                <a href="development.html">
+            
+                    
+                    开发
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6" data-path="hot-module-replacement.html">
+            
+                <a href="hot-module-replacement.html">
+            
+                    
+                    模块热替换
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7" data-path="production.html">
+            
+                <a href="production.html">
+            
+                    
+                    生产环境构建
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.8" data-path="tree-shaking.html">
+            
+                <a href="tree-shaking.html">
+            
+                    
+                    Tree shaking
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.3.9" data-path="code-splitting.html">
+            
+                <a href="code-splitting.html">
+            
+                    
+                    代码分离(Code Splitting)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.10" data-path="lazy-loading.html">
+            
+                <a href="lazy-loading.html">
+            
+                    
+                    懒加载(Lazy Loading)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.11" data-path="caching.html">
+            
+                <a href="caching.html">
+            
+                    
+                    缓存(Caching)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.12" data-path="author-libraries.html">
+            
+                <a href="author-libraries.html">
+            
+                    
+                    创建库(Library)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.13" data-path="shimming.html">
+            
+                <a href="shimming.html">
+            
+                    
+                    Shimming
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.14" data-path="typescript.html">
+            
+                <a href="typescript.html">
+            
+                    
+                    TypeScript
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.15" data-path="migrating.html">
+            
+                <a href="migrating.html">
+            
+                    
+                    从 v1 迁移到 v2
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.16" data-path="environment-variables.html">
+            
+                <a href="environment-variables.html">
+            
+                    
+                    使用环境变量
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.17" data-path="development-vagrant.html">
+            
+                <a href="development-vagrant.html">
+            
+                    
+                    开发 - Vagrant
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.18" data-path="dependency-management.html">
+            
+                <a href="dependency-management.html">
+            
+                    
+                    管理依赖
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.19" data-path="public-path.html">
+            
+                <a href="public-path.html">
+            
+                    
+                    Public Path(公共路径)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.20" data-path="integrations.html">
+            
+                <a href="integrations.html">
+            
+                    
+                    集成(Integrations)
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >代码分离(Code Splitting)</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <p>T&gt; &#x672C;&#x6307;&#x5357;&#x6269;&#x5C55;&#x4E86;<a href="getting-started">&#x8D77;&#x6B65;</a>&#x548C;<a href="output-management">&#x7BA1;&#x7406;&#x6784;&#x5EFA;&#x6587;&#x4EF6;</a>&#x4E2D;&#x63D0;&#x4F9B;&#x7684;&#x793A;&#x4F8B;&#x3002;&#x8BF7;&#x786E;&#x4FDD;&#x60A8;&#x81F3;&#x5C11;&#x5DF2;&#x719F;&#x6089;&#x5176;&#x4E2D;&#x63D0;&#x4F9B;&#x7684;&#x793A;&#x4F8B;&#x3002;</p>
+<p>&#x4EE3;&#x7801;&#x5206;&#x79BB;&#x662F; webpack &#x4E2D;&#x6700;&#x5F15;&#x4EBA;&#x6CE8;&#x76EE;&#x7684;&#x7279;&#x6027;&#x4E4B;&#x4E00;&#x3002;&#x6B64;&#x7279;&#x6027;&#x80FD;&#x591F;&#x628A;&#x4EE3;&#x7801;&#x5206;&#x79BB;&#x5230;&#x4E0D;&#x540C;&#x7684; bundle &#x4E2D;&#xFF0C;&#x7136;&#x540E;&#x53EF;&#x4EE5;&#x6309;&#x9700;&#x52A0;&#x8F7D;&#x6216;&#x5E76;&#x884C;&#x52A0;&#x8F7D;&#x8FD9;&#x4E9B;&#x6587;&#x4EF6;&#x3002;&#x4EE3;&#x7801;&#x5206;&#x79BB;&#x53EF;&#x4EE5;&#x7528;&#x4E8E;&#x83B7;&#x53D6;&#x66F4;&#x5C0F;&#x7684; bundle&#xFF0C;&#x4EE5;&#x53CA;&#x63A7;&#x5236;&#x8D44;&#x6E90;&#x52A0;&#x8F7D;&#x4F18;&#x5148;&#x7EA7;&#xFF0C;&#x5982;&#x679C;&#x4F7F;&#x7528;&#x5408;&#x7406;&#xFF0C;&#x4F1A;&#x6781;&#x5927;&#x5F71;&#x54CD;&#x52A0;&#x8F7D;&#x65F6;&#x95F4;&#x3002;</p>
+<p>&#x6709;&#x4E09;&#x79CD;&#x5E38;&#x7528;&#x7684;&#x4EE3;&#x7801;&#x5206;&#x79BB;&#x65B9;&#x6CD5;&#xFF1A;</p>
+<ul>
+<li>&#x5165;&#x53E3;&#x8D77;&#x70B9;&#xFF1A;&#x4F7F;&#x7528; <a href="../configuration/entry-context"><code>entry</code></a> &#x9009;&#x9879;&#x624B;&#x52A8;&#x5206;&#x79BB;&#x4EE3;&#x7801;&#x3002;</li>
+<li>&#x9632;&#x6B62;&#x91CD;&#x590D;&#xFF1A;&#x4F7F;&#x7528; <a href="../plugins/commons-chunk-plugin"><code>CommonsChunkPlugin</code></a> &#x53BB;&#x91CD;&#x548C;&#x5206;&#x79BB; chunk&#x3002;</li>
+<li>&#x52A8;&#x6001;&#x5BFC;&#x5165;&#xFF1A;&#x901A;&#x8FC7;&#x6A21;&#x5757;&#x7684;&#x5185;&#x8054;&#x51FD;&#x6570;&#x8C03;&#x7528;&#x6765;&#x5206;&#x79BB;&#x4EE3;&#x7801;&#x3002;</li>
+</ul>
+<h2 id="entry-points">Entry Points</h2>
+<p>This is by far the easiest, and most intuitive, way to split code. However, it is more manual and has a some pitfalls we will go over. Let&apos;s take a look at how we might split another module from the main bundle:</p>
+<p><strong>project</strong></p>
+<pre><code class="lang-diff">webpack-demo
+|- package.json
+|- webpack.config.js
+|- /dist
+|- /src
+  |- index.js
+<span class="hljs-addition">+ |- another-module.js</span>
+|- /node_modules
+</code></pre>
+<p><strong>another-module.js</strong></p>
+<pre><code class="lang-js"><span class="hljs-keyword">import</span> _ <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;lodash&apos;</span>;
+
+<span class="hljs-built_in">console</span>.log(
+  _.join([<span class="hljs-string">&apos;Another&apos;</span>, <span class="hljs-string">&apos;module&apos;</span>, <span class="hljs-string">&apos;loaded!&apos;</span>], <span class="hljs-string">&apos; &apos;</span>)
+);
+</code></pre>
+<p><strong>webpack.config.js</strong></p>
+<pre><code class="lang-js"><span class="hljs-keyword">const</span> path = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;path&apos;</span>);
+<span class="hljs-keyword">const</span> HTMLWebpackPlugin = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;html-webpack-plugin&apos;</span>);
+
+<span class="hljs-built_in">module</span>.exports = {
+  entry: {
+    index: <span class="hljs-string">&apos;./src/index.js&apos;</span>,
+    another: <span class="hljs-string">&apos;./src/another-module.js&apos;</span>
+  },
+  plugins: [
+    <span class="hljs-keyword">new</span> HTMLWebpackPlugin({
+      title: <span class="hljs-string">&apos;Code Splitting&apos;</span>
+    })
+  ],
+  output: {
+    filename: <span class="hljs-string">&apos;[name].bundle.js&apos;</span>,
+    path: path.resolve(__dirname, <span class="hljs-string">&apos;dist&apos;</span>)
+  }
+};
+</code></pre>
+<p>This will yield the following build result:</p>
+<pre><code class="lang-bash">Hash: 309402710a14167f42a8
+Version: webpack 2.6.1
+Time: 570ms
+            Asset    Size  Chunks                    Chunk Names
+  index.bundle.js  544 kB       0  [emitted]  [big]  index
+another.bundle.js  544 kB       1  [emitted]  [big]  another
+   [0] ./~/lodash/lodash.js 540 kB {0} {1} [built]
+   [1] (webpack)/buildin/global.js 509 bytes {0} {1} [built]
+   [2] (webpack)/buildin/module.js 517 bytes {0} {1} [built]
+   [3] ./src/another-module.js 87 bytes {1} [built]
+   [4] ./src/index.js 216 bytes {0} [built]
+</code></pre>
+<p>As mentioned there are some pitfalls to this approach:</p>
+<ul>
+<li>If there are any duplicated modules between entry chunks they will be included in both bundles.</li>
+<li>It isn&apos;t as flexible and can&apos;t be used to dynamically split code with the core application logic.</li>
+</ul>
+<p>The first of these two points is definitely an issue for our example, as <code>lodash</code> is also imported within <code>./src/index.js</code> and will thus be duplicated in both bundles. Let&apos;s remove this duplication by using the <code>CommonsChunkPlugin</code>.</p>
+<h2 id="prevent-duplication">Prevent Duplication</h2>
+<p>The <a href="../plugins/commons-chunk-plugin"><code>CommonsChunkPlugin</code></a> allows us to extract common dependencies into an existing entry chunk or an entirely new chunk. Let&apos;s use this to de-duplicate the <code>lodash</code> dependency from the previous example:</p>
+<p><strong>webpack.config.js</strong></p>
+<pre><code class="lang-diff">  const path = require(&apos;path&apos;);
+<span class="hljs-addition">+ const webpack = require(&apos;webpack&apos;);</span>
+  const HTMLWebpackPlugin = require(&apos;html-webpack-plugin&apos;);
+
+  module.exports = {
+    entry: {
+      index: &apos;./src/index.js&apos;,
+      another: &apos;./src/another-module.js&apos;
+    },
+    plugins: [
+      new HTMLWebpackPlugin({
+        title: &apos;Code Splitting&apos;
+<span class="hljs-deletion">-     })</span>
+<span class="hljs-addition">+     }),</span>
+<span class="hljs-addition">+     new webpack.optimize.CommonsChunkPlugin({</span>
+<span class="hljs-addition">+       name: &apos;common&apos; // Specify the common bundle&apos;s name.</span>
+<span class="hljs-addition">+     })</span>
+    ],
+    output: {
+      filename: &apos;[name].bundle.js&apos;,
+      path: path.resolve(__dirname, &apos;dist&apos;)
+    }
+  };
+</code></pre>
+<p>With the <a href="../plugins/commons-chunk-plugin"><code>CommonsChunkPlugin</code></a> in place, we should now see the duplicate dependency removed from our <code>index.bundle.js</code>. The plugin should notice that we&apos;ve separated <code>lodash</code> out to a separate chunk and remove the dead weight from our main bundle. Let&apos;s do an <code>npm run build</code> to see if it worked:</p>
+<pre><code class="lang-bash">Hash: 70a59f8d46ff12575481
+Version: webpack 2.6.1
+Time: 510ms
+            Asset       Size  Chunks                    Chunk Names
+  index.bundle.js  665 bytes       0  [emitted]         index
+another.bundle.js  537 bytes       1  [emitted]         another
+ common.bundle.js     547 kB       2  [emitted]  [big]  common
+   [0] ./~/lodash/lodash.js 540 kB {2} [built]
+   [1] (webpack)/buildin/global.js 509 bytes {2} [built]
+   [2] (webpack)/buildin/module.js 517 bytes {2} [built]
+   [3] ./src/another-module.js 87 bytes {1} [built]
+   [4] ./src/index.js 216 bytes {0} [built]
+</code></pre>
+<p>Here are some other useful plugins and loaders provide by the community for splitting code:</p>
+<ul>
+<li><a href="../plugins/extract-text-webpack-plugin"><code>ExtractTextPlugin</code></a>: Useful for splitting CSS out from the main application.</li>
+<li><a href="../loaders/bundle-loader"><code>bundle-loader</code></a>: Used to split code and lazy load the resulting bundles.</li>
+<li><a href="https://github.com/gaearon/promise-loader" target="_blank"><code>promise-loader</code></a>: Similar to the <code>bundle-loader</code> but uses promises.</li>
+</ul>
+<p>T&gt; The <a href="../plugins/commons-chunk-plugin"><code>CommonsChunkPlugin</code></a> is also used to split vendor modules from core application code using <a href="../plugins/commons-chunk-plugin#explicit-vendor-chunk">explicit vendor chunks</a>.</p>
+<h2 id="dynamic-imports">Dynamic Imports</h2>
+<p>Two similar techniques are supported by webpack when it comes to dynamic code splitting. The first and more preferable approach is use to the <a href="../api/module-methods#import-"><code>import()</code> syntax</a> that conforms to the <a href="https://github.com/tc39/proposal-dynamic-import" target="_blank">ECMAScript proposal</a> for dynamic imports. The legacy, webpack-specific approach is to use <a href="../api/module-methods#require-ensure"><code>require.ensure</code></a>. Let&apos;s try using the first of these two approaches...</p>
+<p>W&gt; <code>import()</code> calls use <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise" target="_blank">promises</a>. If you want to support older browsers that lack <code>Promise</code> support (e.g. Internet Explorer), you&apos;ll need to include a <code>Promise</code> polyfill <em>before</em> your primary bundles.</p>
+<p>Before we start, let&apos;s remove the extra <a href="../concepts/entry-points"><code>entry</code></a> and <a href="../plugins/commons-chunk-plugin"><code>CommonsChunkPlugin</code></a> from our config as they won&apos;t be needed for this next demonstration:</p>
+<p><strong>webpack.config.js</strong></p>
+<pre><code class="lang-diff">  const path = require(&apos;path&apos;);
+<span class="hljs-deletion">- const webpack = require(&apos;webpack&apos;);</span>
+  const HTMLWebpackPlugin = require(&apos;html-webpack-plugin&apos;);
+
+  module.exports = {
+    entry: {
+<span class="hljs-addition">+     index: &apos;./src/index.js&apos;</span>
+<span class="hljs-deletion">-     index: &apos;./src/index.js&apos;,</span>
+<span class="hljs-deletion">-     another: &apos;./src/another-module.js&apos;</span>
+    },
+    plugins: [
+      new HTMLWebpackPlugin({
+        title: &apos;Code Splitting&apos;
+<span class="hljs-deletion">-     }),</span>
+<span class="hljs-addition">+     })</span>
+<span class="hljs-deletion">-     new webpack.optimize.CommonsChunkPlugin({</span>
+<span class="hljs-deletion">-       name: &apos;common&apos; // Specify the common bundle&apos;s name.</span>
+<span class="hljs-deletion">-     })</span>
+    ],
+    output: {
+      filename: &apos;[name].bundle.js&apos;,
+<span class="hljs-addition">+     chunkFilename: &apos;[name].bundle.js&apos;,</span>
+      path: path.resolve(__dirname, &apos;dist&apos;)
+    }
+  };
+</code></pre>
+<p>We&apos;ll also update our project to remove the now unused files:</p>
+<p><strong>project</strong></p>
+<pre><code class="lang-diff">webpack-demo
+|- package.json
+|- webpack.config.js
+|- /dist
+|- /src
+  |- index.js
+<span class="hljs-deletion">- |- another-module.js</span>
+|- /node_modules
+</code></pre>
+<p>Now, instead of statically importing <code>lodash</code>, we&apos;ll use dynamic importing to separate a chunk:</p>
+<p><strong>src/index.js</strong></p>
+<pre><code class="lang-diff"><span class="hljs-deletion">- import _ from &apos;lodash&apos;;</span>
+<span class="hljs-deletion">-</span>
+<span class="hljs-deletion">- function component() {</span>
+<span class="hljs-addition">+ function getComponent() {</span>
+<span class="hljs-deletion">-   var element = document.createElement(&apos;div&apos;);</span>
+<span class="hljs-deletion">-</span>
+<span class="hljs-deletion">-   // Lodash, now imported by this script</span>
+<span class="hljs-deletion">-   element.innerHTML = _.join([&apos;Hello&apos;, &apos;webpack&apos;], &apos; &apos;);</span>
+<span class="hljs-addition">+   return import(/* webpackChunkName: &quot;lodash&quot; */ &apos;lodash&apos;).then(_ =&gt; {</span>
+<span class="hljs-addition">+     var element = document.createElement(&apos;div&apos;);</span>
+<span class="hljs-addition">+</span>
+<span class="hljs-addition">+     element.innerHTML = _.join([&apos;Hello&apos;, &apos;webpack&apos;], &apos; &apos;);</span>
+<span class="hljs-addition">+</span>
+<span class="hljs-addition">+     return element;</span>
+<span class="hljs-addition">+</span>
+<span class="hljs-addition">+   }).catch(error =&gt; &apos;An error occurred while loading the component&apos;);</span>
+  }
+
+<span class="hljs-deletion">- document.body.appendChild(component());</span>
+<span class="hljs-addition">+ getComponent().then(component =&gt; {</span>
+<span class="hljs-addition">+   document.body.appendChild(component);</span>
+<span class="hljs-addition">+ })</span>
+</code></pre>
+<p>Note the use of <code>webpackChunkName</code> in the comment. This will cause our separate bundle to be named <code>lodash.bundle.js</code> instead of just <code>[id].bundle.js</code>. For more information on <code>webpackChunkName</code> and the other available options, see the <a href="../api/module-methods#import-"><code>import()</code> documentation</a>. Let&apos;s run webpack to see <code>lodash</code> separated out to a separate bundle:</p>
+<pre><code class="lang-bash">Hash: a27e5bf1dd73c675d5c9
+Version: webpack 2.6.1
+Time: 544ms
+           Asset     Size  Chunks                    Chunk Names
+lodash.bundle.js   541 kB       0  [emitted]  [big]  lodash
+ index.bundle.js  6.35 kB       1  [emitted]         index
+   [0] ./~/lodash/lodash.js 540 kB {0} [built]
+   [1] ./src/index.js 377 bytes {1} [built]
+   [2] (webpack)/buildin/global.js 509 bytes {0} [built]
+   [3] (webpack)/buildin/module.js 517 bytes {0} [built]
+</code></pre>
+<p>If you&apos;ve enabled <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/async_function" target="_blank"><code>async</code> functions</a> via a pre-processor like babel, note that you can simplify the code as <code>import()</code> statements just return promises:</p>
+<p><strong>src/index.js</strong></p>
+<pre><code class="lang-diff"><span class="hljs-deletion">- function getComponent() {</span>
+<span class="hljs-addition">+ async function getComponent() {</span>
+<span class="hljs-deletion">-   return import(/* webpackChunkName: &quot;lodash&quot; */ &apos;lodash&apos;).then(module =&gt; {</span>
+<span class="hljs-deletion">-     var element = document.createElement(&apos;div&apos;);</span>
+<span class="hljs-deletion">-</span>
+<span class="hljs-deletion">-     element.innerHTML = _.join([&apos;Hello&apos;, &apos;webpack&apos;], &apos; &apos;);</span>
+<span class="hljs-deletion">-</span>
+<span class="hljs-deletion">-     return element;</span>
+<span class="hljs-deletion">-</span>
+<span class="hljs-deletion">-   }).catch(error =&gt; &apos;An error occurred while loading the component&apos;);</span>
+<span class="hljs-addition">+   var element = document.createElement(&apos;div&apos;);</span>
+<span class="hljs-addition">+   const _ = await import(/* webpackChunkName: &quot;lodash&quot; */ &apos;lodash&apos;);</span>
+<span class="hljs-addition">+</span>
+<span class="hljs-addition">+   element.innerHTML = _.join([&apos;Hello&apos;, &apos;webpack&apos;], &apos; &apos;);</span>
+<span class="hljs-addition">+</span>
+<span class="hljs-addition">+   return element;</span>
+  }
+
+  getComponent().then(component =&gt; {
+    document.body.appendChild(component);
+  });
+</code></pre>
+<h2 id="bundle-analysis">Bundle Analysis</h2>
+<p>Once you start splitting your code, it can be useful to analyze the output to check where modules have ended up. The <a href="https://github.com/webpack/analyse" target="_blank">official analyze tool</a> is a good place to start. There are some other community-supported options out there as well:</p>
+<ul>
+<li><a href="https://alexkuz.github.io/webpack-chart/" target="_blank">webpack chart</a></li>
+<li><a href="https://chrisbateman.github.io/webpack-visualizer/" target="_blank">webpack visualizer</a></li>
+<li><a href="https://github.com/th0r/webpack-bundle-analyzer" target="_blank"><code>webpack-bundle-analyzer</code></a></li>
+</ul>
+<h2 id="next-steps">Next Steps</h2>
+<p>See <a href="lazy-loading">Lazy Loading</a> for a more concrete example of how <code>import()</code> can be used in a real application and <a href="caching">Caching</a> to learn how to split code more effectively.</p>
+<hr>
+<blockquote>
+<p>&#x539F;&#x6587;&#xFF1A;<a href="https://webpack.js.org/guides/code-splitting/" target="_blank">https://webpack.js.org/guides/code-splitting/</a></p>
+</blockquote>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="tree-shaking.html" class="navigation navigation-prev " aria-label="Previous page: Tree shaking">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="lazy-loading.html" class="navigation navigation-next " aria-label="Next page: 懒加载(Lazy Loading)">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"代码分离(Code Splitting)","sort":9,"contributors":["pksjce","pastelsky","simon04","jonwheeler","johnstew","shinxi","tomtasche","levy9527","rahulcs","chrisVillanueva","rafde","bartushek","shaunwallace","skipjack","jakearchibald","TheDutchCoder","rouzbeh84"],"level":"1.3.9","depth":2,"next":{"title":"懒加载(Lazy Loading)","level":"1.3.10","depth":2,"path":"guides/lazy-loading.md","ref":"guides/lazy-loading.md","articles":[]},"previous":{"title":"Tree shaking","level":"1.3.8","depth":2,"path":"guides/tree-shaking.md","ref":"guides/tree-shaking.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"guides/code-splitting.md","mtime":"2017-07-25T19:18:26.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-07-31T07:40:32.889Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

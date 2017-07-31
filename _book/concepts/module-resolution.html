@@ -1,0 +1,721 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>模块解析(Module Resolution) · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.2">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="dependency-graph.html" />
+    
+    
+    <link rel="prev" href="modules.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    第一部分：概念
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="entry-points.html">
+            
+                <a href="entry-points.html">
+            
+                    
+                    入口起点(Entry Points)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="output.html">
+            
+                <a href="output.html">
+            
+                    
+                    输出(Output)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="loaders.html">
+            
+                <a href="loaders.html">
+            
+                    
+                    加载器(Loaders)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="plugins.html">
+            
+                <a href="plugins.html">
+            
+                    
+                    插件(Plugins)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="configuration.html">
+            
+                <a href="configuration.html">
+            
+                    
+                    配置(Configuration)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6" data-path="modules.html">
+            
+                <a href="modules.html">
+            
+                    
+                    模块(Modules)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.2.7" data-path="module-resolution.html">
+            
+                <a href="module-resolution.html">
+            
+                    
+                    模块解析(Module Resolution)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.8" data-path="dependency-graph.html">
+            
+                <a href="dependency-graph.html">
+            
+                    
+                    依赖图表(Dependency Graph)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.9" data-path="manifest.html">
+            
+                <a href="manifest.html">
+            
+                    
+                    文件清单(Manifest)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.10" data-path="targets.html">
+            
+                <a href="targets.html">
+            
+                    
+                    构建目标(Targets)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.11" data-path="hot-module-replacement.html">
+            
+                <a href="hot-module-replacement.html">
+            
+                    
+                    模块热替换(Hot Module Replacement)
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../guides/">
+            
+                <a href="../guides/">
+            
+                    
+                    第二部分：指南
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../guides/installation.html">
+            
+                <a href="../guides/installation.html">
+            
+                    
+                    安装
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../guides/getting-started.html">
+            
+                <a href="../guides/getting-started.html">
+            
+                    
+                    起步
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../guides/asset-management.html">
+            
+                <a href="../guides/asset-management.html">
+            
+                    
+                    管理资源
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="../guides/output-management.html">
+            
+                <a href="../guides/output-management.html">
+            
+                    
+                    管理输出
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="../guides/development.html">
+            
+                <a href="../guides/development.html">
+            
+                    
+                    开发
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6" data-path="../guides/hot-module-replacement.html">
+            
+                <a href="../guides/hot-module-replacement.html">
+            
+                    
+                    模块热替换
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7" data-path="../guides/production.html">
+            
+                <a href="../guides/production.html">
+            
+                    
+                    生产环境构建
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.8" data-path="../guides/tree-shaking.html">
+            
+                <a href="../guides/tree-shaking.html">
+            
+                    
+                    Tree shaking
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.9" data-path="../guides/code-splitting.html">
+            
+                <a href="../guides/code-splitting.html">
+            
+                    
+                    代码分离(Code Splitting)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.10" data-path="../guides/lazy-loading.html">
+            
+                <a href="../guides/lazy-loading.html">
+            
+                    
+                    懒加载(Lazy Loading)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.11" data-path="../guides/caching.html">
+            
+                <a href="../guides/caching.html">
+            
+                    
+                    缓存(Caching)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.12" data-path="../guides/author-libraries.html">
+            
+                <a href="../guides/author-libraries.html">
+            
+                    
+                    创建库(Library)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.13" data-path="../guides/shimming.html">
+            
+                <a href="../guides/shimming.html">
+            
+                    
+                    Shimming
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.14" data-path="../guides/typescript.html">
+            
+                <a href="../guides/typescript.html">
+            
+                    
+                    TypeScript
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.15" data-path="../guides/migrating.html">
+            
+                <a href="../guides/migrating.html">
+            
+                    
+                    从 v1 迁移到 v2
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.16" data-path="../guides/environment-variables.html">
+            
+                <a href="../guides/environment-variables.html">
+            
+                    
+                    使用环境变量
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.17" data-path="../guides/development-vagrant.html">
+            
+                <a href="../guides/development-vagrant.html">
+            
+                    
+                    开发 - Vagrant
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.18" data-path="../guides/dependency-management.html">
+            
+                <a href="../guides/dependency-management.html">
+            
+                    
+                    管理依赖
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.19" data-path="../guides/public-path.html">
+            
+                <a href="../guides/public-path.html">
+            
+                    
+                    Public Path(公共路径)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.20" data-path="../guides/integrations.html">
+            
+                <a href="../guides/integrations.html">
+            
+                    
+                    集成(Integrations)
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >模块解析(Module Resolution)</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <p>resolver &#x662F;&#x4E00;&#x4E2A;&#x5E93;(library)&#xFF0C;&#x7528;&#x4E8E;&#x5E2E;&#x52A9;&#x627E;&#x5230;&#x6A21;&#x5757;&#x7684;&#x7EDD;&#x5BF9;&#x8DEF;&#x5F84;&#x3002;&#x4E00;&#x4E2A;&#x6A21;&#x5757;&#x53EF;&#x4EE5;&#x4F5C;&#x4E3A;&#x53E6;&#x4E00;&#x4E2A;&#x6A21;&#x5757;&#x7684;&#x4F9D;&#x8D56;&#x6A21;&#x5757;&#xFF0C;&#x7136;&#x540E;&#x88AB;&#x540E;&#x8005;&#x5F15;&#x7528;&#xFF0C;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code class="lang-js"><span class="hljs-keyword">import</span> foo <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;path/to/module&apos;</span>
+<span class="hljs-comment">// &#x6216;&#x8005;</span>
+<span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;path/to/module&apos;</span>)
+</code></pre>
+<p>&#x6240;&#x4F9D;&#x8D56;&#x7684;&#x6A21;&#x5757;&#x53EF;&#x4EE5;&#x662F;&#x6765;&#x81EA;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x4EE3;&#x7801;&#x6216;&#x7B2C;&#x4E09;&#x65B9;&#x7684;&#x5E93;(library)&#x3002;resolver &#x5E2E;&#x52A9; webpack &#x627E;&#x5230; bundle &#x4E2D;&#x9700;&#x8981;&#x5F15;&#x5165;&#x7684;&#x6A21;&#x5757;&#x4EE3;&#x7801;&#xFF0C;&#x8FD9;&#x4E9B;&#x4EE3;&#x7801;&#x5728;&#x5305;&#x542B;&#x5728;&#x6BCF;&#x4E2A; <code>require</code>/<code>import</code> &#x8BED;&#x53E5;&#x4E2D;&#x3002;
+&#x5F53;&#x6253;&#x5305;&#x6A21;&#x5757;&#x65F6;&#xFF0C;<code>webpack</code> &#x4F7F;&#x7528; <a href="https://github.com/webpack/enhanced-resolve" target="_blank">enhanced-resolve</a> &#x6765;&#x89E3;&#x6790;&#x6587;&#x4EF6;&#x8DEF;&#x5F84;</p>
+<h2 id="webpack-&#x4E2D;&#x7684;&#x89E3;&#x6790;&#x89C4;&#x5219;">webpack &#x4E2D;&#x7684;&#x89E3;&#x6790;&#x89C4;&#x5219;</h2>
+<p>&#x4F7F;&#x7528; <code>enhanced-resolve</code>&#xFF0C;webpack &#x80FD;&#x591F;&#x89E3;&#x6790;&#x4E09;&#x79CD;&#x6587;&#x4EF6;&#x8DEF;&#x5F84;&#xFF1A;</p>
+<h3 id="&#x7EDD;&#x5BF9;&#x8DEF;&#x5F84;">&#x7EDD;&#x5BF9;&#x8DEF;&#x5F84;</h3>
+<pre><code class="lang-js"><span class="hljs-keyword">import</span> <span class="hljs-string">&quot;/home/me/file&quot;</span>;
+
+<span class="hljs-keyword">import</span> <span class="hljs-string">&quot;C:\\Users\\me\\file&quot;</span>;
+</code></pre>
+<p>&#x7531;&#x4E8E;&#x6211;&#x4EEC;&#x5DF2;&#x7ECF;&#x53D6;&#x5F97;&#x6587;&#x4EF6;&#x7684;&#x7EDD;&#x5BF9;&#x8DEF;&#x5F84;&#xFF0C;&#x56E0;&#x6B64;&#x4E0D;&#x9700;&#x8981;&#x8FDB;&#x4E00;&#x6B65;&#x518D;&#x505A;&#x89E3;&#x6790;&#x3002;</p>
+<h3 id="&#x76F8;&#x5BF9;&#x8DEF;&#x5F84;">&#x76F8;&#x5BF9;&#x8DEF;&#x5F84;</h3>
+<pre><code class="lang-js"><span class="hljs-keyword">import</span> <span class="hljs-string">&quot;../src/file1&quot;</span>;
+<span class="hljs-keyword">import</span> <span class="hljs-string">&quot;./file2&quot;</span>;
+</code></pre>
+<p>&#x5728;&#x8FD9;&#x79CD;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x4F7F;&#x7528; <code>import</code> &#x6216; <code>require</code> &#x7684;&#x8D44;&#x6E90;&#x6587;&#x4EF6;(resource file)&#x6240;&#x5728;&#x7684;&#x76EE;&#x5F55;&#x88AB;&#x8BA4;&#x4E3A;&#x662F;&#x4E0A;&#x4E0B;&#x6587;&#x76EE;&#x5F55;(context directory)&#x3002;&#x5728; <code>import/require</code> &#x4E2D;&#x7ED9;&#x5B9A;&#x7684;&#x76F8;&#x5BF9;&#x8DEF;&#x5F84;&#xFF0C;&#x4F1A;&#x6DFB;&#x52A0;&#x6B64;&#x4E0A;&#x4E0B;&#x6587;&#x8DEF;&#x5F84;(context path)&#xFF0C;&#x4EE5;&#x4EA7;&#x751F;&#x6A21;&#x5757;&#x7684;&#x7EDD;&#x5BF9;&#x8DEF;&#x5F84;(absolute path)&#x3002;</p>
+<h3 id="&#x6A21;&#x5757;&#x8DEF;&#x5F84;">&#x6A21;&#x5757;&#x8DEF;&#x5F84;</h3>
+<pre><code class="lang-js"><span class="hljs-keyword">import</span> <span class="hljs-string">&quot;module&quot;</span>;
+<span class="hljs-keyword">import</span> <span class="hljs-string">&quot;module/lib/file&quot;</span>;
+</code></pre>
+<p>&#x6A21;&#x5757;&#x5C06;&#x5728; <a href="../configuration/resolve#resolve-modules"><code>resolve.modules</code></a> &#x4E2D;&#x6307;&#x5B9A;&#x7684;&#x6240;&#x6709;&#x76EE;&#x5F55;&#x5185;&#x641C;&#x7D22;&#x3002;
+&#x4F60;&#x53EF;&#x4EE5;&#x66FF;&#x6362;&#x521D;&#x59CB;&#x6A21;&#x5757;&#x8DEF;&#x5F84;&#xFF0C;&#x6B64;&#x66FF;&#x6362;&#x8DEF;&#x5F84;&#x901A;&#x8FC7;&#x4F7F;&#x7528; <a href="../configuration/resolve#resolve-alias"><code>resolve.alias</code></a> &#x914D;&#x7F6E;&#x9009;&#x9879;&#x6765;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x522B;&#x540D;&#x3002;</p>
+<p>&#x4E00;&#x65E6;&#x6839;&#x636E;&#x4E0A;&#x8FF0;&#x89C4;&#x5219;&#x89E3;&#x6790;&#x8DEF;&#x5F84;&#x540E;&#xFF0C;&#x89E3;&#x6790;&#x5668;(resolver)&#x5C06;&#x68C0;&#x67E5;&#x8DEF;&#x5F84;&#x662F;&#x5426;&#x6307;&#x5411;&#x6587;&#x4EF6;&#x6216;&#x76EE;&#x5F55;&#x3002;&#x5982;&#x679C;&#x8DEF;&#x5F84;&#x6307;&#x5411;&#x4E00;&#x4E2A;&#x6587;&#x4EF6;&#xFF1A;</p>
+<ul>
+<li>&#x5982;&#x679C;&#x8DEF;&#x5F84;&#x5177;&#x6709;&#x6587;&#x4EF6;&#x6269;&#x5C55;&#x540D;&#xFF0C;&#x5219;&#x88AB;&#x76F4;&#x63A5;&#x5C06;&#x6587;&#x4EF6;&#x6253;&#x5305;&#x3002;</li>
+<li>&#x5426;&#x5219;&#xFF0C;&#x5C06;&#x4F7F;&#x7528; [<code>resolve.extensions</code>] &#x9009;&#x9879;&#x4F5C;&#x4E3A;&#x6587;&#x4EF6;&#x6269;&#x5C55;&#x540D;&#x6765;&#x89E3;&#x6790;&#xFF0C;&#x6B64;&#x9009;&#x9879;&#x544A;&#x8BC9;&#x89E3;&#x6790;&#x5668;&#x5728;&#x89E3;&#x6790;&#x4E2D;&#x80FD;&#x591F;&#x63A5;&#x53D7;&#x54EA;&#x4E9B;&#x6269;&#x5C55;&#x540D;&#xFF08;&#x4F8B;&#x5982; <code>.js</code>, <code>.jsx</code>&#xFF09;&#x3002;</li>
+</ul>
+<p>&#x5982;&#x679C;&#x8DEF;&#x5F84;&#x6307;&#x5411;&#x4E00;&#x4E2A;&#x6587;&#x4EF6;&#x5939;&#xFF0C;&#x5219;&#x91C7;&#x53D6;&#x4EE5;&#x4E0B;&#x6B65;&#x9AA4;&#x627E;&#x5230;&#x5177;&#x6709;&#x6B63;&#x786E;&#x6269;&#x5C55;&#x540D;&#x7684;&#x6B63;&#x786E;&#x6587;&#x4EF6;&#xFF1A;</p>
+<ul>
+<li>&#x5982;&#x679C;&#x6587;&#x4EF6;&#x5939;&#x4E2D;&#x5305;&#x542B; <code>package.json</code> &#x6587;&#x4EF6;&#xFF0C;&#x5219;&#x6309;&#x7167;&#x987A;&#x5E8F;&#x67E5;&#x627E; <a href="../configuration/resolve#resolve-mainfields"><code>resolve.mainFields</code></a> &#x914D;&#x7F6E;&#x9009;&#x9879;&#x4E2D;&#x6307;&#x5B9A;&#x7684;&#x5B57;&#x6BB5;&#x3002;&#x5E76;&#x4E14; <code>package.json</code> &#x4E2D;&#x7684;&#x7B2C;&#x4E00;&#x4E2A;&#x8FD9;&#x6837;&#x7684;&#x5B57;&#x6BB5;&#x786E;&#x5B9A;&#x6587;&#x4EF6;&#x8DEF;&#x5F84;&#x3002;</li>
+<li>&#x5982;&#x679C; <code>package.json</code> &#x6587;&#x4EF6;&#x4E0D;&#x5B58;&#x5728;&#x6216;&#x8005; <code>package.json</code> &#x6587;&#x4EF6;&#x4E2D;&#x7684; main &#x5B57;&#x6BB5;&#x6CA1;&#x6709;&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;&#x6709;&#x6548;&#x8DEF;&#x5F84;&#xFF0C;&#x5219;&#x6309;&#x7167;&#x987A;&#x5E8F;&#x67E5;&#x627E; <a href="../configuration/resolve#resolve-mainfiles"><code>resolve.mainFiles</code></a> &#x914D;&#x7F6E;&#x9009;&#x9879;&#x4E2D;&#x6307;&#x5B9A;&#x7684;&#x6587;&#x4EF6;&#x540D;&#xFF0C;&#x770B;&#x662F;&#x5426;&#x80FD;&#x5728; import/require &#x76EE;&#x5F55;&#x4E0B;&#x5339;&#x914D;&#x5230;&#x4E00;&#x4E2A;&#x5B58;&#x5728;&#x7684;&#x6587;&#x4EF6;&#x540D;&#x3002;</li>
+<li>&#x6587;&#x4EF6;&#x6269;&#x5C55;&#x540D;&#x901A;&#x8FC7; <code>resolve.extensions</code> &#x9009;&#x9879;&#x91C7;&#x7528;&#x7C7B;&#x4F3C;&#x7684;&#x65B9;&#x6CD5;&#x8FDB;&#x884C;&#x89E3;&#x6790;&#x3002;</li>
+</ul>
+<p>webpack &#x6839;&#x636E;&#x6784;&#x5EFA;&#x76EE;&#x6807;(build target)&#x4E3A;&#x8FD9;&#x4E9B;&#x9009;&#x9879;&#x63D0;&#x4F9B;&#x4E86;&#x5408;&#x7406;&#x7684;<a href="../configuration/resolve">&#x9ED8;&#x8BA4;</a>&#x914D;&#x7F6E;&#x3002;</p>
+<h2 id="&#x89E3;&#x6790;-loaderresolving-loaders">&#x89E3;&#x6790; Loader(Resolving Loaders)</h2>
+<p>Loader &#x89E3;&#x6790;&#x9075;&#x5FAA;&#x4E0E;&#x6587;&#x4EF6;&#x89E3;&#x6790;&#x5668;&#x6307;&#x5B9A;&#x7684;&#x89C4;&#x5219;&#x76F8;&#x540C;&#x7684;&#x89C4;&#x5219;&#x3002;&#x4F46;&#x662F; <a href="../configuration/resolve#resolveloader"><code>resolveLoader</code></a> &#x914D;&#x7F6E;&#x9009;&#x9879;&#x53EF;&#x4EE5;&#x7528;&#x6765;&#x4E3A; Loader &#x63D0;&#x4F9B;&#x72EC;&#x7ACB;&#x7684;&#x89E3;&#x6790;&#x89C4;&#x5219;&#x3002;</p>
+<h2 id="&#x7F13;&#x5B58;">&#x7F13;&#x5B58;</h2>
+<p>&#x6BCF;&#x4E2A;&#x6587;&#x4EF6;&#x7CFB;&#x7EDF;&#x8BBF;&#x95EE;&#x90FD;&#x88AB;&#x7F13;&#x5B58;&#xFF0C;&#x4EE5;&#x4FBF;&#x66F4;&#x5FEB;&#x89E6;&#x53D1;&#x5BF9;&#x540C;&#x4E00;&#x6587;&#x4EF6;&#x7684;&#x591A;&#x4E2A;&#x5E76;&#x884C;&#x6216;&#x7A7F;&#x884C;&#x8BF7;&#x6C42;&#x3002;&#x5728;<a href="../configuration/watch#watch">&#x89C2;&#x5BDF;&#x6A21;&#x5F0F;</a>&#x4E0B;&#xFF0C;&#x53EA;&#x6709;&#x4FEE;&#x6539;&#x8FC7;&#x7684;&#x6587;&#x4EF6;&#x4F1A;&#x4ECE;&#x7F13;&#x5B58;&#x4E2D;&#x6458;&#x51FA;&#x3002;&#x5982;&#x679C;&#x5173;&#x95ED;&#x89C2;&#x5BDF;&#x6A21;&#x5F0F;&#xFF0C;&#x5728;&#x6BCF;&#x6B21;&#x7F16;&#x8BD1;&#x524D;&#x6E05;&#x7406;&#x7F13;&#x5B58;&#x3002;</p>
+<p>&#x6709;&#x5173;&#x4E0A;&#x8FF0;&#x914D;&#x7F6E;&#x7684;&#x66F4;&#x591A;&#x4FE1;&#x606F;&#xFF0C;&#x8BF7;&#x67E5;&#x770B;<a href="../configuration/resolve">&#x89E3;&#x6790; API</a>&#x5B66;&#x4E60;&#x3002;</p>
+<hr>
+<blockquote>
+<p>&#x539F;&#x6587;&#xFF1A;<a href="https://webpack.js.org/concepts/module-resolution/" target="_blank">https://webpack.js.org/concepts/module-resolution/</a></p>
+</blockquote>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="modules.html" class="navigation navigation-prev " aria-label="Previous page: 模块(Modules)">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="dependency-graph.html" class="navigation navigation-next " aria-label="Next page: 依赖图表(Dependency Graph)">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"模块解析(Module Resolution)","sort":8,"contributors":["pksjce","pastelsky"],"level":"1.2.7","depth":2,"next":{"title":"依赖图表(Dependency Graph)","level":"1.2.8","depth":2,"path":"concepts/dependency-graph.md","ref":"concepts/dependency-graph.md","articles":[]},"previous":{"title":"模块(Modules)","level":"1.2.6","depth":2,"path":"concepts/modules.md","ref":"concepts/modules.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"concepts/module-resolution.md","mtime":"2017-07-25T19:18:26.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-07-31T07:40:32.889Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

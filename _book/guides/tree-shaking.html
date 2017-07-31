@@ -1,0 +1,733 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Tree shaking · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.2">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="code-splitting.html" />
+    
+    
+    <link rel="prev" href="production.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../concepts/">
+            
+                <a href="../concepts/">
+            
+                    
+                    第一部分：概念
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../concepts/entry-points.html">
+            
+                <a href="../concepts/entry-points.html">
+            
+                    
+                    入口起点(Entry Points)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../concepts/output.html">
+            
+                <a href="../concepts/output.html">
+            
+                    
+                    输出(Output)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../concepts/loaders.html">
+            
+                <a href="../concepts/loaders.html">
+            
+                    
+                    加载器(Loaders)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="../concepts/plugins.html">
+            
+                <a href="../concepts/plugins.html">
+            
+                    
+                    插件(Plugins)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="../concepts/configuration.html">
+            
+                <a href="../concepts/configuration.html">
+            
+                    
+                    配置(Configuration)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6" data-path="../concepts/modules.html">
+            
+                <a href="../concepts/modules.html">
+            
+                    
+                    模块(Modules)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7" data-path="../concepts/module-resolution.html">
+            
+                <a href="../concepts/module-resolution.html">
+            
+                    
+                    模块解析(Module Resolution)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.8" data-path="../concepts/dependency-graph.html">
+            
+                <a href="../concepts/dependency-graph.html">
+            
+                    
+                    依赖图表(Dependency Graph)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.9" data-path="../concepts/manifest.html">
+            
+                <a href="../concepts/manifest.html">
+            
+                    
+                    文件清单(Manifest)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.10" data-path="../concepts/targets.html">
+            
+                <a href="../concepts/targets.html">
+            
+                    
+                    构建目标(Targets)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.11" data-path="../concepts/hot-module-replacement.html">
+            
+                <a href="../concepts/hot-module-replacement.html">
+            
+                    
+                    模块热替换(Hot Module Replacement)
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    第二部分：指南
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="installation.html">
+            
+                <a href="installation.html">
+            
+                    
+                    安装
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="getting-started.html">
+            
+                <a href="getting-started.html">
+            
+                    
+                    起步
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="asset-management.html">
+            
+                <a href="asset-management.html">
+            
+                    
+                    管理资源
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="output-management.html">
+            
+                <a href="output-management.html">
+            
+                    
+                    管理输出
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="development.html">
+            
+                <a href="development.html">
+            
+                    
+                    开发
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6" data-path="hot-module-replacement.html">
+            
+                <a href="hot-module-replacement.html">
+            
+                    
+                    模块热替换
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7" data-path="production.html">
+            
+                <a href="production.html">
+            
+                    
+                    生产环境构建
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.3.8" data-path="tree-shaking.html">
+            
+                <a href="tree-shaking.html">
+            
+                    
+                    Tree shaking
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.9" data-path="code-splitting.html">
+            
+                <a href="code-splitting.html">
+            
+                    
+                    代码分离(Code Splitting)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.10" data-path="lazy-loading.html">
+            
+                <a href="lazy-loading.html">
+            
+                    
+                    懒加载(Lazy Loading)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.11" data-path="caching.html">
+            
+                <a href="caching.html">
+            
+                    
+                    缓存(Caching)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.12" data-path="author-libraries.html">
+            
+                <a href="author-libraries.html">
+            
+                    
+                    创建库(Library)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.13" data-path="shimming.html">
+            
+                <a href="shimming.html">
+            
+                    
+                    Shimming
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.14" data-path="typescript.html">
+            
+                <a href="typescript.html">
+            
+                    
+                    TypeScript
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.15" data-path="migrating.html">
+            
+                <a href="migrating.html">
+            
+                    
+                    从 v1 迁移到 v2
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.16" data-path="environment-variables.html">
+            
+                <a href="environment-variables.html">
+            
+                    
+                    使用环境变量
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.17" data-path="development-vagrant.html">
+            
+                <a href="development-vagrant.html">
+            
+                    
+                    开发 - Vagrant
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.18" data-path="dependency-management.html">
+            
+                <a href="dependency-management.html">
+            
+                    
+                    管理依赖
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.19" data-path="public-path.html">
+            
+                <a href="public-path.html">
+            
+                    
+                    Public Path(公共路径)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.20" data-path="integrations.html">
+            
+                <a href="integrations.html">
+            
+                    
+                    集成(Integrations)
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >Tree shaking</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <p><em>Tree shaking</em> &#x662F;&#x4E00;&#x4E2A;&#x672F;&#x8BED;&#xFF0C;&#x901A;&#x5E38;&#x7528;&#x6765;&#x63CF;&#x8FF0;&#x79FB;&#x9664; JavaScript &#x4E0A;&#x4E0B;&#x6587;&#x4E2D;&#x65E0;&#x7528;&#x4EE3;&#x7801;&#x8FD9;&#x4E2A;&#x8FC7;&#x7A0B;&#xFF0C;&#x6216;&#x8005;&#x66F4;&#x51C6;&#x786E;&#x7684;&#x8BF4;&#x662F;&#x6309;&#x9700;&#x5F15;&#x7528;&#x4EE3;&#x7801;&#xFF0C;&#x5B83;&#x4F9D;&#x8D56;&#x4E8E; ES2015 &#x6A21;&#x5757;&#x7CFB;&#x7EDF;&#x4E2D; <a href="https://developer.mozilla.org//en-US/docs/Web/JavaScript/Reference/Statements/import" target="_blank">import</a>/<a href="https://developer.mozilla.org//en-US/docs/Web/JavaScript/Reference/Statements/export" target="_blank">export</a> &#x7684;<a href="http://exploringjs.com/es6/ch_modules.html#static-module-structure" target="_blank">&#x9759;&#x6001;&#x7ED3;&#x6784;&#x7279;&#x6027;</a>&#x3002;&#x8FD9;&#x4E2A;&#x672F;&#x8BED;&#x548C;&#x6982;&#x5FF5;&#x5B9E;&#x9645;&#x4E0A;&#x662F;&#x5174;&#x8D77;&#x4E8E; ES2015 &#x6A21;&#x5757;&#x6253;&#x5305;&#x5DE5;&#x5177; <a href="https://github.com/rollup/rollup" target="_blank">rollup</a>&#x3002;</p>
+<p>webpack 2 &#x539F;&#x751F;&#x652F;&#x6301; ES6 &#x6A21;&#x5757; (&#x522B;&#x540D; <em>harmony modules</em>) &#xFF0C;&#x5E76;&#x80FD;&#x68C0;&#x6D4B;&#x51FA;&#x672A;&#x4F7F;&#x7528;&#x7684;&#x6A21;&#x5757;&#x8F93;&#x51FA;&#x3002;</p>
+<h2 id="&#x793A;&#x4F8B;">&#x793A;&#x4F8B;</h2>
+<p>&#x4E3E;&#x4E00;&#x4E2A; <strong>maths.js</strong> &#x5E93;&#x4F8B;&#x5B50;&#xFF0C;&#x5B83;&#x8F93;&#x51FA;&#x4E24;&#x4E2A;&#x65B9;&#x6CD5; <code>square</code> &#x548C; <code>cube</code>&#xFF1A;</p>
+<pre><code class="lang-javascript"><span class="hljs-comment">// &#x8FD9;&#x4E2A;&#x51FD;&#x6570;&#x6CA1;&#x6709;&#x88AB;&#x5176;&#x4ED6;&#x5730;&#x65B9;&#x5F15;&#x7528;&#x8FC7;</span>
+<span class="hljs-keyword">export</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">square</span>(<span class="hljs-params">x</span>) </span>{
+    <span class="hljs-keyword">return</span> x * x;
+}
+
+<span class="hljs-comment">// &#x8FD9;&#x4E2A;&#x51FD;&#x6570;&#x88AB;&#x5F15;&#x7528;&#x4E86;</span>
+<span class="hljs-keyword">export</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">cube</span>(<span class="hljs-params">x</span>) </span>{
+    <span class="hljs-keyword">return</span> x * x * x;
+}
+</code></pre>
+<p>&#x5728; <strong>main.js</strong> &#x4E2D;&#x6211;&#x4EEC;&#x53EA;&#x5F15;&#x7528; <code>cube</code> &#x65B9;&#x6CD5;&#xFF1A;</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">import</span> {cube} <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;./maths.js&apos;</span>;
+<span class="hljs-built_in">console</span>.log(cube(<span class="hljs-number">5</span>)); <span class="hljs-comment">// 125</span>
+</code></pre>
+<p>&#x8FD0;&#x884C; <code>node_modules/.bin/webpack main.js dist.js</code> &#x5E76;&#x68C0;&#x67E5; <code>dist.js</code> &#x53EF;&#x53D1;&#x73B0; <code>square</code> &#x6CA1;&#x6709;&#x88AB;&#x8F93;&#x51FA;:</p>
+<pre><code class="lang-javascript"><span class="hljs-comment">/* ... webpackBootstrap ... */</span>
+<span class="hljs-comment">/******/</span> ([
+<span class="hljs-comment">/* 0 */</span>
+<span class="hljs-comment">/***/</span> (<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">module, __webpack_exports__, __webpack_require__</span>) </span>{
+<span class="hljs-meta">
+&quot;use strict&quot;</span>;
+<span class="hljs-comment">/* unused harmony export square */</span>
+<span class="hljs-comment">/* harmony export (immutable) */</span> __webpack_exports__[<span class="hljs-string">&quot;a&quot;</span>] = cube;
+<span class="hljs-comment">// &#x8FD9;&#x4E2A;&#x51FD;&#x6570;&#x6CA1;&#x6709;&#x88AB;&#x5176;&#x4ED6;&#x5730;&#x65B9;&#x5F15;&#x7528;&#x8FC7;</span>
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">square</span>(<span class="hljs-params">x</span>) </span>{
+  <span class="hljs-keyword">return</span> x * x;
+}
+
+<span class="hljs-comment">// &#x8FD9;&#x4E2A;&#x51FD;&#x6570;&#x88AB;&#x5F15;&#x7528;&#x4E86;</span>
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">cube</span>(<span class="hljs-params">x</span>) </span>{
+  <span class="hljs-keyword">return</span> x * x * x;
+}
+
+<span class="hljs-comment">/***/</span> }),
+<span class="hljs-comment">/* 1 */</span>
+<span class="hljs-comment">/***/</span> (<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">module, __webpack_exports__, __webpack_require__</span>) </span>{
+<span class="hljs-meta">
+&quot;use strict&quot;</span>;
+<span class="hljs-built_in">Object</span>.defineProperty(__webpack_exports__, <span class="hljs-string">&quot;__esModule&quot;</span>, { value: <span class="hljs-literal">true</span> });
+<span class="hljs-comment">/* harmony import */</span> <span class="hljs-keyword">var</span> __WEBPACK_IMPORTED_MODULE_0__maths_js__ = __webpack_require__(<span class="hljs-number">0</span>);
+
+<span class="hljs-built_in">console</span>.log(__webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__maths_js__[<span class="hljs-string">&quot;a&quot;</span> <span class="hljs-comment">/* cube */</span>])(<span class="hljs-number">5</span>)); <span class="hljs-comment">// 125</span>
+
+<span class="hljs-comment">/***/</span> })
+</code></pre>
+<p>&#x5F53;&#x6267;&#x884C;&#x4E00;&#x6B21;<a href="production">&#x751F;&#x4EA7;&#x73AF;&#x5883;&#x6784;&#x5EFA;</a> <code>node_modules/.bin/webpack --optimize-minimize main.js dist.min.js</code> &#x540E;&#xFF0C;&#x6253;&#x5305;&#x51FA;&#x6765;&#x7684;&#x4EE3;&#x7801;&#x53EA;&#x5305;&#x542B; <code>cube</code> &#x65B9;&#x6CD5;&#xFF0C;&#x5E76;&#x6CA1;&#x6709; <code>square</code> &#x65B9;&#x6CD5;&#xFF1A;</p>
+<pre><code class="lang-javascript"><span class="hljs-comment">/* ... */</span>
+<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">e,t,n</span>)</span>{<span class="hljs-string">&quot;use strict&quot;</span>;<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">r</span>(<span class="hljs-params">e</span>)</span>{<span class="hljs-keyword">return</span> e*e*e}t.a=r}
+<span class="hljs-comment">/* ... */</span>
+<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">e,t,n</span>)</span>{<span class="hljs-string">&quot;use strict&quot;</span>;<span class="hljs-built_in">Object</span>.defineProperty(t,<span class="hljs-string">&quot;__esModule&quot;</span>,{value:!<span class="hljs-number">0</span>});<span class="hljs-keyword">var</span> r=n(<span class="hljs-number">0</span>);<span class="hljs-built_in">console</span>.log(n.i(r.a)(<span class="hljs-number">5</span>))}
+</code></pre>
+<hr>
+<blockquote>
+<p>&#x539F;&#x6587;&#xFF1A;<a href="https://webpack.js.org/guides/tree-shaking/" target="_blank">https://webpack.js.org/guides/tree-shaking/</a></p>
+</blockquote>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="production.html" class="navigation navigation-prev " aria-label="Previous page: 生产环境构建">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="code-splitting.html" class="navigation navigation-next " aria-label="Next page: 代码分离(Code Splitting)">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Tree shaking","sort":8,"contributors":["simon04","zacanger","alexjoverm"],"related":[{"title":"Tree shaking with webpack 2, TypeScript and Babel","url":"https://alexjoverm.github.io/2017/03/06/Tree-shaking-with-Webpack-2-TypeScript-and-Babel/"},{"title":"Tree-shaking with webpack 2 and Babel 6","url":"http://www.2ality.com/2015/12/webpack-tree-shaking.html"},{"title":"webpack 2 Tree Shaking Configuration","url":"https://medium.com/modus-create-front-end-development/webpack-2-tree-shaking-configuration-9f1de90f3233#.15tuaw71x"}],"level":"1.3.8","depth":2,"next":{"title":"代码分离(Code Splitting)","level":"1.3.9","depth":2,"path":"guides/code-splitting.md","ref":"guides/code-splitting.md","articles":[]},"previous":{"title":"生产环境构建","level":"1.3.7","depth":2,"path":"guides/production.md","ref":"guides/production.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"guides/tree-shaking.md","mtime":"2017-07-25T19:18:26.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-07-31T07:40:32.889Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

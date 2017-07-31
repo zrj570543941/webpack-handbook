@@ -1,0 +1,846 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>管理输出 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.2">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="development.html" />
+    
+    
+    <link rel="prev" href="asset-management.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../concepts/">
+            
+                <a href="../concepts/">
+            
+                    
+                    第一部分：概念
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../concepts/entry-points.html">
+            
+                <a href="../concepts/entry-points.html">
+            
+                    
+                    入口起点(Entry Points)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../concepts/output.html">
+            
+                <a href="../concepts/output.html">
+            
+                    
+                    输出(Output)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../concepts/loaders.html">
+            
+                <a href="../concepts/loaders.html">
+            
+                    
+                    加载器(Loaders)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="../concepts/plugins.html">
+            
+                <a href="../concepts/plugins.html">
+            
+                    
+                    插件(Plugins)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="../concepts/configuration.html">
+            
+                <a href="../concepts/configuration.html">
+            
+                    
+                    配置(Configuration)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6" data-path="../concepts/modules.html">
+            
+                <a href="../concepts/modules.html">
+            
+                    
+                    模块(Modules)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7" data-path="../concepts/module-resolution.html">
+            
+                <a href="../concepts/module-resolution.html">
+            
+                    
+                    模块解析(Module Resolution)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.8" data-path="../concepts/dependency-graph.html">
+            
+                <a href="../concepts/dependency-graph.html">
+            
+                    
+                    依赖图表(Dependency Graph)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.9" data-path="../concepts/manifest.html">
+            
+                <a href="../concepts/manifest.html">
+            
+                    
+                    文件清单(Manifest)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.10" data-path="../concepts/targets.html">
+            
+                <a href="../concepts/targets.html">
+            
+                    
+                    构建目标(Targets)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.11" data-path="../concepts/hot-module-replacement.html">
+            
+                <a href="../concepts/hot-module-replacement.html">
+            
+                    
+                    模块热替换(Hot Module Replacement)
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    第二部分：指南
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="installation.html">
+            
+                <a href="installation.html">
+            
+                    
+                    安装
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="getting-started.html">
+            
+                <a href="getting-started.html">
+            
+                    
+                    起步
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="asset-management.html">
+            
+                <a href="asset-management.html">
+            
+                    
+                    管理资源
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.3.4" data-path="output-management.html">
+            
+                <a href="output-management.html">
+            
+                    
+                    管理输出
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="development.html">
+            
+                <a href="development.html">
+            
+                    
+                    开发
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6" data-path="hot-module-replacement.html">
+            
+                <a href="hot-module-replacement.html">
+            
+                    
+                    模块热替换
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7" data-path="production.html">
+            
+                <a href="production.html">
+            
+                    
+                    生产环境构建
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.8" data-path="tree-shaking.html">
+            
+                <a href="tree-shaking.html">
+            
+                    
+                    Tree shaking
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.9" data-path="code-splitting.html">
+            
+                <a href="code-splitting.html">
+            
+                    
+                    代码分离(Code Splitting)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.10" data-path="lazy-loading.html">
+            
+                <a href="lazy-loading.html">
+            
+                    
+                    懒加载(Lazy Loading)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.11" data-path="caching.html">
+            
+                <a href="caching.html">
+            
+                    
+                    缓存(Caching)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.12" data-path="author-libraries.html">
+            
+                <a href="author-libraries.html">
+            
+                    
+                    创建库(Library)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.13" data-path="shimming.html">
+            
+                <a href="shimming.html">
+            
+                    
+                    Shimming
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.14" data-path="typescript.html">
+            
+                <a href="typescript.html">
+            
+                    
+                    TypeScript
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.15" data-path="migrating.html">
+            
+                <a href="migrating.html">
+            
+                    
+                    从 v1 迁移到 v2
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.16" data-path="environment-variables.html">
+            
+                <a href="environment-variables.html">
+            
+                    
+                    使用环境变量
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.17" data-path="development-vagrant.html">
+            
+                <a href="development-vagrant.html">
+            
+                    
+                    开发 - Vagrant
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.18" data-path="dependency-management.html">
+            
+                <a href="dependency-management.html">
+            
+                    
+                    管理依赖
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.19" data-path="public-path.html">
+            
+                <a href="public-path.html">
+            
+                    
+                    Public Path(公共路径)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.20" data-path="integrations.html">
+            
+                <a href="integrations.html">
+            
+                    
+                    集成(Integrations)
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >管理输出</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <p>T&gt; &#x672C;&#x6307;&#x5357;&#x7EE7;&#x7EED;&#x5EF6;&#x4F38;<a href="asset-management"><code>&#x7BA1;&#x7406;&#x8D44;&#x6E90;</code></a>&#x6307;&#x5357;&#x4E2D;&#x7684;&#x4EE3;&#x7801;&#x793A;&#x4F8B;&#x3002;</p>
+<p>&#x5230;&#x76EE;&#x524D;&#x4E3A;&#x6B62;&#xFF0C;&#x6211;&#x4EEC;&#x5728; <code>index.html</code> &#x6587;&#x4EF6;&#x4E2D;&#x624B;&#x52A8;&#x5F15;&#x5165;&#x6240;&#x6709;&#x8D44;&#x6E90;&#xFF0C;&#x7136;&#x800C;&#x968F;&#x7740;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x589E;&#x957F;&#xFF0C;&#x5E76;&#x4E14;&#x4E00;&#x65E6;&#x5F00;&#x59CB;&#x5BF9;<a href="caching">&#x6587;&#x4EF6;&#x540D;&#x4F7F;&#x7528;&#x54C8;&#x5E0C;(hash)</a>]&#x5E76;&#x8F93;&#x51FA;<a href="code-splitting">&#x591A;&#x4E2A; bundle</a>&#xFF0C;&#x624B;&#x52A8;&#x5730;&#x5BF9; <code>index.html</code> &#x6587;&#x4EF6;&#x8FDB;&#x884C;&#x7BA1;&#x7406;&#xFF0C;&#x4E00;&#x5207;&#x5C31;&#x4F1A;&#x53D8;&#x5F97;&#x56F0;&#x96BE;&#x8D77;&#x6765;&#x3002;&#x7136;&#x800C;&#xFF0C;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x4E00;&#x4E9B;&#x63D2;&#x4EF6;&#xFF0C;&#x4F1A;&#x4F7F;&#x8FD9;&#x4E2A;&#x8FC7;&#x7A0B;&#x66F4;&#x5BB9;&#x6613;&#x64CD;&#x63A7;&#x3002;</p>
+<h2 id="&#x9884;&#x5148;&#x51C6;&#x5907;">&#x9884;&#x5148;&#x51C6;&#x5907;</h2>
+<p>&#x9996;&#x5148;&#xFF0C;&#x8BA9;&#x6211;&#x4EEC;&#x8C03;&#x6574;&#x4E00;&#x4E0B;&#x6211;&#x4EEC;&#x7684;&#x9879;&#x76EE;&#xFF1A;</p>
+<p><strong>project</strong></p>
+<pre><code class="lang-diff">  webpack-demo
+  |- package.json
+  |- webpack.config.js
+  |- /dist
+  |- /src
+    |- index.js
+<span class="hljs-addition">+   |- print.js</span>
+  |- /node_modules
+</code></pre>
+<p>&#x6211;&#x4EEC;&#x5728; <code>src/print.js</code> &#x6587;&#x4EF6;&#x4E2D;&#x6DFB;&#x52A0;&#x4E00;&#x4E9B;&#x903B;&#x8F91;&#xFF1A;</p>
+<p><strong>src/print.js</strong></p>
+<pre><code class="lang-js"><span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">printMe</span>(<span class="hljs-params"></span>) </span>{
+  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;I get called from print.js!&apos;</span>);
+}
+</code></pre>
+<p>&#x5E76;&#x4E14;&#x5728; <code>src/index.js</code> &#x6587;&#x4EF6;&#x4E2D;&#x4F7F;&#x7528;&#x8FD9;&#x4E2A;&#x51FD;&#x6570;&#xFF1A;</p>
+<p><strong>src/index.js</strong></p>
+<pre><code class="lang-diff">  import _ from &apos;lodash&apos;;
+<span class="hljs-addition">+ import printMe from &apos;./print.js&apos;;</span>
+
+  function component() {
+    var element = document.createElement(&apos;div&apos;);
+<span class="hljs-addition">+   var btn = document.createElement(&apos;button&apos;);</span>
+
+    element.innerHTML = _.join([&apos;Hello&apos;, &apos;webpack&apos;], &apos; &apos;);
+
+<span class="hljs-addition">+   btn.innerHTML = &apos;Click me and check the console!&apos;;</span>
+<span class="hljs-addition">+   btn.onclick = printMe;</span>
+<span class="hljs-addition">+</span>
+<span class="hljs-addition">+   element.appendChild(btn);</span>
+
+    return element;
+  }
+
+  document.body.appendChild(component());
+</code></pre>
+<p>&#x6211;&#x4EEC;&#x8FD8;&#x8981;&#x66F4;&#x65B0; <code>dist/index.html</code> &#x6587;&#x4EF6;&#xFF0C;&#x6765;&#x4E3A; webpack &#x5206;&#x79BB;&#x5165;&#x53E3;&#x505A;&#x597D;&#x51C6;&#x5907;&#xFF1A;</p>
+<p><strong>dist/index.html</strong></p>
+<pre><code class="lang-diff">  &lt;html&gt;
+    &lt;head&gt;
+<span class="hljs-deletion">-     &lt;title&gt;Asset Management&lt;/title&gt;</span>
+<span class="hljs-addition">+     &lt;title&gt;Output Management&lt;/title&gt;</span>
+<span class="hljs-addition">+     &lt;script src=&quot;./print.bundle.js&quot;&gt;&lt;/script&gt;</span>
+    &lt;/head&gt;
+    &lt;body&gt;
+<span class="hljs-deletion">-     &lt;script src=&quot;./bundle.js&quot;&gt;&lt;/script&gt;</span>
+<span class="hljs-addition">+     &lt;script src=&quot;./app.bundle.js&quot;&gt;&lt;/script&gt;</span>
+    &lt;/body&gt;
+  &lt;/html&gt;
+</code></pre>
+<p>&#x73B0;&#x5728;&#x8C03;&#x6574;&#x914D;&#x7F6E;&#x3002;&#x6211;&#x4EEC;&#x5C06;&#x5728; entry &#x6DFB;&#x52A0; <code>src/print.js</code> &#x4F5C;&#x4E3A;&#x65B0;&#x7684;&#x5165;&#x53E3;&#x8D77;&#x70B9;&#xFF08;<code>print</code>&#xFF09;&#xFF0C;&#x7136;&#x540E;&#x4FEE;&#x6539; output&#xFF0C;&#x4EE5;&#x4FBF;&#x6839;&#x636E;&#x5165;&#x53E3;&#x8D77;&#x70B9;&#x540D;&#x79F0;&#x52A8;&#x6001;&#x751F;&#x6210; bundle &#x540D;&#x79F0;&#xFF1A;</p>
+<p><strong>webpack.config.js</strong></p>
+<pre><code class="lang-diff">  const path = require(&apos;path&apos;);
+
+  module.exports = {
+    entry: {
+<span class="hljs-deletion">-     index: &apos;./src/index.js&apos;,</span>
+<span class="hljs-addition">+     app: &apos;./src/index.js&apos;,</span>
+<span class="hljs-addition">+     print: &apos;./src/print.js&apos;</span>
+    },
+    output: {
+<span class="hljs-deletion">-     filename: &apos;bundle.js&apos;,</span>
+<span class="hljs-addition">+     filename: &apos;[name].bundle.js&apos;,</span>
+      path: path.resolve(__dirname, &apos;dist&apos;)
+    }
+  };
+</code></pre>
+<p>&#x6267;&#x884C; <code>npm run build</code>&#xFF0C;&#x7136;&#x540E;&#x770B;&#x5230;&#x751F;&#x6210;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code class="lang-bash">Hash: aa305b0f3373c63c9051
+Version: webpack 3.0.0
+Time: 536ms
+          Asset     Size  Chunks                    Chunk Names
+  app.bundle.js   545 kB    0, 1  [emitted]  [big]  app
+print.bundle.js  2.74 kB       1  [emitted]         <span class="hljs-built_in">print</span>
+   [0] ./src/print.js 84 bytes {0} {1} [built]
+   [1] ./src/index.js 403 bytes {0} [built]
+   [3] (webpack)/buildin/global.js 509 bytes {0} [built]
+   [4] (webpack)/buildin/module.js 517 bytes {0} [built]
+    + 1 hidden module
+</code></pre>
+<p>&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x770B;&#x5230;&#xFF0C;webpack &#x751F;&#x6210; <code>print.bundle.js</code> &#x548C; <code>app.bundle.js</code> &#x6587;&#x4EF6;&#xFF0C;&#x8FD9;&#x4E5F;&#x548C;&#x6211;&#x4EEC;&#x5728; <code>index.html</code> &#x6587;&#x4EF6;&#x4E2D;&#x6307;&#x5B9A;&#x7684;&#x6587;&#x4EF6;&#x540D;&#x79F0;&#x76F8;&#x5BF9;&#x5E94;&#x3002;&#x5982;&#x679C;&#x4F60;&#x5728;&#x6D4F;&#x89C8;&#x5668;&#x4E2D;&#x6253;&#x5F00; <code>index.html</code>&#xFF0C;&#x5C31;&#x53EF;&#x4EE5;&#x770B;&#x5230;&#x5728;&#x70B9;&#x51FB;&#x6309;&#x94AE;&#x65F6;&#x4F1A;&#x53D1;&#x751F;&#x4EC0;&#x4E48;&#x3002;</p>
+<p>&#x4F46;&#x662F;&#xFF0C;&#x5982;&#x679C;&#x6211;&#x4EEC;&#x66F4;&#x6539;&#x4E86;&#x6211;&#x4EEC;&#x7684;&#x4E00;&#x4E2A;&#x5165;&#x53E3;&#x8D77;&#x70B9;&#x7684;&#x540D;&#x79F0;&#xFF0C;&#x751A;&#x81F3;&#x6DFB;&#x52A0;&#x4E86;&#x4E00;&#x4E2A;&#x65B0;&#x7684;&#x540D;&#x79F0;&#xFF0C;&#x4F1A;&#x53D1;&#x751F;&#x4EC0;&#x4E48;&#xFF1F;&#x751F;&#x6210;&#x7684;&#x5305;&#x5C06;&#x88AB;&#x91CD;&#x547D;&#x540D;&#x5728;&#x4E00;&#x4E2A;&#x6784;&#x5EFA;&#x4E2D;&#xFF0C;&#x4F46;&#x662F;&#x6211;&#x4EEC;&#x7684;<code>index.html</code>&#x6587;&#x4EF6;&#x4ECD;&#x7136;&#x4F1A;&#x5F15;&#x7528;&#x65E7;&#x7684;&#x540D;&#x5B57;&#x3002;&#x6211;&#x4EEC;&#x7528; <a href="../plugins/html-webpack-plugin"><code>HtmlWebpackPlugin</code></a> &#x6765;&#x89E3;&#x51B3;&#x8FD9;&#x4E2A;&#x95EE;&#x9898;&#x3002;</p>
+<h2 id="&#x8BBE;&#x5B9A;-htmlwebpackplugin">&#x8BBE;&#x5B9A; HtmlWebpackPlugin</h2>
+<p>&#x9996;&#x5148;&#x5B89;&#x88C5;&#x63D2;&#x4EF6;&#xFF0C;&#x5E76;&#x4E14;&#x8C03;&#x6574; <code>webpack.config.js</code> &#x6587;&#x4EF6;&#xFF1A;</p>
+<pre><code class="lang-bash">npm install --save-dev html-webpack-plugin
+</code></pre>
+<p><strong>webpack.config.js</strong></p>
+<pre><code class="lang-diff">  const path = require(&apos;path&apos;);
+<span class="hljs-addition">+ const HtmlWebpackPlugin = require(&apos;html-webpack-plugin&apos;);</span>
+
+  module.exports = {
+    entry: {
+      app: &apos;./src/index.js&apos;,
+      print: &apos;./src/print.js&apos;
+    },
+<span class="hljs-addition">+   plugins: [</span>
+<span class="hljs-addition">+     new HtmlWebpackPlugin({</span>
+<span class="hljs-addition">+       title: &apos;Output Management&apos;</span>
+<span class="hljs-addition">+     })</span>
+<span class="hljs-addition">+   ],</span>
+    output: {
+      filename: &apos;[name].bundle.js&apos;,
+      path: path.resolve(__dirname, &apos;dist&apos;)
+    }
+  };
+</code></pre>
+<p>&#x5728;&#x6211;&#x4EEC;&#x6784;&#x5EFA;&#x4E4B;&#x524D;&#xFF0C;&#x4F60;&#x5E94;&#x8BE5;&#x4E86;&#x89E3;&#xFF0C;&#x867D;&#x7136;&#x5728; <code>dist/</code> &#x6587;&#x4EF6;&#x5939;&#x6211;&#x4EEC;&#x5DF2;&#x7ECF;&#x6709; <code>index.html</code> &#x8FD9;&#x4E2A;&#x6587;&#x4EF6;&#xFF0C;&#x7136;&#x800C; <code>HtmlWebpackPlugin</code> &#x8FD8;&#x662F;&#x4F1A;&#x9ED8;&#x8BA4;&#x751F;&#x6210; <code>index.html</code> &#x6587;&#x4EF6;&#x3002;&#x8FD9;&#x5C31;&#x662F;&#x8BF4;&#xFF0C;&#x5B83;&#x4F1A;&#x7528;&#x65B0;&#x751F;&#x6210;&#x7684; <code>index.html</code> &#x6587;&#x4EF6;&#xFF0C;&#x628A;&#x6211;&#x4EEC;&#x7684;&#x539F;&#x6765;&#x7684;&#x66FF;&#x6362;&#x3002;&#x8BA9;&#x6211;&#x4EEC;&#x770B;&#x4E0B;&#x5728;&#x6267;&#x884C; <code>npm run build</code> &#x540E;&#x4F1A;&#x53D1;&#x751F;&#x4EC0;&#x4E48;&#xFF1A;</p>
+<pre><code class="lang-bash">Hash: 81f82697c19b5f49aebd
+Version: webpack 2.6.1
+Time: 854ms
+           Asset       Size  Chunks                    Chunk Names
+vendor.bundle.js     544 kB       0  [emitted]  [big]  vendor
+   app.bundle.js    2.81 kB       1  [emitted]         app
+      index.html  249 bytes          [emitted]
+   [0] ./~/lodash/lodash.js 540 kB {0} [built]
+   [1] (webpack)/buildin/global.js 509 bytes {0} [built]
+   [2] (webpack)/buildin/module.js 517 bytes {0} [built]
+   [3] ./src/index.js 172 bytes {1} [built]
+   [4] multi lodash 28 bytes {0} [built]
+Child html-webpack-plugin <span class="hljs-keyword">for</span> <span class="hljs-string">&quot;index.html&quot;</span>:
+       [0] ./~/lodash/lodash.js 540 kB {0} [built]
+       [1] ./~/html-webpack-plugin/lib/loader.js!./~/html-webpack-plugin/default_index.ejs 538 bytes {0} [built]
+       [2] (webpack)/buildin/global.js 509 bytes {0} [built]
+       [3] (webpack)/buildin/module.js 517 bytes {0} [built]
+</code></pre>
+<p>&#x5982;&#x679C;&#x4F60;&#x5728;&#x4EE3;&#x7801;&#x7F16;&#x8F91;&#x5668;&#x4E2D; <code>index.html</code> &#x6253;&#x5F00;&#xFF0C;&#x4F60;&#x5C31;&#x4F1A;&#x770B;&#x5230; <code>HtmlWebpackPlugin</code> &#x521B;&#x5EFA;&#x4E86;&#x4E00;&#x4E2A;&#x5168;&#x65B0;&#x7684;&#x6587;&#x4EF6;&#xFF0C;&#x6240;&#x6709;&#x7684; bundle &#x4F1A;&#x81EA;&#x52A8;&#x6DFB;&#x52A0;&#x5230; html &#x4E2D;&#x3002;</p>
+<p>&#x5982;&#x679C;&#x4F60;&#x60F3;&#x8981;&#x4E86;&#x89E3;&#x66F4;&#x591A; <code>HtmlWebpackPlugin</code> &#x63D2;&#x4EF6;&#x63D0;&#x4F9B;&#x7684;&#x5168;&#x90E8;&#x529F;&#x80FD;&#x548C;&#x9009;&#x9879;&#xFF0C;&#x90A3;&#x4E48;&#x4F60;&#x5C31;&#x5E94;&#x8BE5;&#x591A;&#x591A;&#x719F;&#x6089; <a href="https://github.com/jantimon/html-webpack-plugin" target="_blank"><code>HtmlWebpackPlugin</code></a> &#x4ED3;&#x5E93;&#x3002;</p>
+<p>&#x4F60;&#x8FD8;&#x53EF;&#x4EE5;&#x770B;&#x4E00;&#x4E0B; <a href="https://github.com/jaketrent/html-webpack-template" target="_blank"><code>html-webpack-template</code></a>&#xFF0C;&#x9664;&#x4E86;&#x9ED8;&#x8BA4;&#x6A21;&#x677F;&#x4E4B;&#x5916;&#xFF0C;&#x8FD8;&#x63D0;&#x4F9B;&#x4E86;&#x4E00;&#x4E9B;&#x989D;&#x5916;&#x7684;&#x529F;&#x80FD;&#x3002;</p>
+<h2 id="&#x6E05;&#x7406;-dist-&#x6587;&#x4EF6;&#x5939;">&#x6E05;&#x7406; <code>/dist</code> &#x6587;&#x4EF6;&#x5939;</h2>
+<p>&#x4F60;&#x53EF;&#x80FD;&#x5DF2;&#x7ECF;&#x6CE8;&#x610F;&#x5230;&#xFF0C;&#x7531;&#x4E8E;&#x8FC7;&#x53BB;&#x7684;&#x6307;&#x5357;&#x548C;&#x4EE3;&#x7801;&#x793A;&#x4F8B;&#x9057;&#x7559;&#x4E0B;&#x6765;&#xFF0C;&#x5BFC;&#x81F4;&#x6211;&#x4EEC;&#x7684; <code>/dist</code> &#x6587;&#x4EF6;&#x5939;&#x76F8;&#x5F53;&#x6742;&#x4E71;&#x3002;webpack &#x4F1A;&#x751F;&#x6210;&#x6587;&#x4EF6;&#xFF0C;&#x7136;&#x540E;&#x5C06;&#x8FD9;&#x4E9B;&#x6587;&#x4EF6;&#x653E;&#x7F6E;&#x5728; <code>/dist</code> &#x6587;&#x4EF6;&#x5939;&#x4E2D;&#xFF0C;&#x4F46;&#x662F; webpack &#x65E0;&#x6CD5;&#x8FFD;&#x8E2A;&#x5230;&#x54EA;&#x4E9B;&#x6587;&#x4EF6;&#x662F;&#x5B9E;&#x9645;&#x5728;&#x9879;&#x76EE;&#x4E2D;&#x7528;&#x5230;&#x7684;&#x3002;</p>
+<p>&#x901A;&#x5E38;&#xFF0C;&#x5728;&#x6BCF;&#x6B21;&#x6784;&#x5EFA;&#x524D;&#x6E05;&#x7406; <code>/dist</code> &#x6587;&#x4EF6;&#x5939;&#xFF0C;&#x662F;&#x6BD4;&#x8F83;&#x63A8;&#x8350;&#x7684;&#x505A;&#x6CD5;&#xFF0C;&#x56E0;&#x6B64;&#x53EA;&#x4F1A;&#x751F;&#x6210;&#x7528;&#x5230;&#x7684;&#x6587;&#x4EF6;&#x3002;&#x8BA9;&#x6211;&#x4EEC;&#x5B8C;&#x6210;&#x8FD9;&#x4E2A;&#x9700;&#x6C42;&#x3002;</p>
+<p><a href="https://www.npmjs.com/package/clean-webpack-plugin" target="_blank"><code>clean-webpack-plugin</code></a> &#x662F;&#x4E00;&#x4E2A;&#x6BD4;&#x8F83;&#x666E;&#x53CA;&#x7684;&#x7BA1;&#x7406;&#x63D2;&#x4EF6;&#xFF0C;&#x8BA9;&#x6211;&#x4EEC;&#x5B89;&#x88C5;&#x548C;&#x914D;&#x7F6E;&#x4E0B;&#x3002;</p>
+<pre><code class="lang-bash">npm install clean-webpack-plugin --save-dev
+</code></pre>
+<p><strong>webpack.config.js</strong></p>
+<pre><code class="lang-diff">  const path = require(&apos;path&apos;);
+  const HtmlWebpackPlugin = require(&apos;html-webpack-plugin&apos;);
+<span class="hljs-addition">+ const CleanWebpackPlugin = require(&apos;clean-webpack-plugin&apos;);</span>
+
+  module.exports = {
+    entry: {
+      app: &apos;./src/index.js&apos;,
+      print: &apos;./src/print.js&apos;
+    },
+    plugins: [
+<span class="hljs-addition">+     new CleanWebpackPlugin([&apos;dist&apos;]),</span>
+      new HtmlWebpackPlugin({
+        title: &apos;Output Management&apos;
+      })
+    ],
+    output: {
+      filename: &apos;[name].bundle.js&apos;,
+      path: path.resolve(__dirname, &apos;dist&apos;)
+    }
+  };
+</code></pre>
+<p>&#x73B0;&#x5728;&#x6267;&#x884C; <code>npm run build</code>&#xFF0C;&#x518D;&#x68C0;&#x67E5; <code>/dist</code> &#x6587;&#x4EF6;&#x5939;&#x3002;&#x5982;&#x679C;&#x4E00;&#x5207;&#x987A;&#x5229;&#xFF0C;&#x4F60;&#x73B0;&#x5728;&#x5E94;&#x8BE5;&#x4E0D;&#x4F1A;&#x518D;&#x770B;&#x5230;&#x65E7;&#x7684;&#x6587;&#x4EF6;&#xFF0C;&#x53EA;&#x6709;&#x6784;&#x5EFA;&#x540E;&#x751F;&#x6210;&#x7684;&#x6587;&#x4EF6;&#xFF01;</p>
+<h2 id="manifest">Manifest</h2>
+<p>&#x4F60;&#x53EF;&#x80FD;&#x4F1A;&#x611F;&#x5174;&#x8DA3;&#xFF0C;webpack&#x53CA;&#x5176;&#x63D2;&#x4EF6;&#x4F3C;&#x4E4E;&#x201C;&#x77E5;&#x9053;&#x201D;&#x5E94;&#x8BE5;&#x54EA;&#x4E9B;&#x6587;&#x4EF6;&#x751F;&#x6210;&#x3002;&#x7B54;&#x6848;&#x662F;&#xFF0C;&#x901A;&#x8FC7; manifest&#xFF0C;webpack &#x80FD;&#x591F;&#x5BF9;&#x300C;&#x4F60;&#x7684;&#x6A21;&#x5757;&#x6620;&#x5C04;&#x5230;&#x8F93;&#x51FA; bundle &#x7684;&#x8FC7;&#x7A0B;&#x300D;&#x4FDD;&#x6301;&#x8FFD;&#x8E2A;&#x3002;&#x5982;&#x679C;&#x4F60;&#x5BF9;&#x901A;&#x8FC7;&#x5176;&#x4ED6;&#x65B9;&#x5F0F;&#x6765;&#x7BA1;&#x7406; webpack &#x7684;<a href="../configuration/output">&#x8F93;&#x51FA;</a>&#x66F4;&#x611F;&#x5174;&#x8DA3;&#xFF0C;&#x90A3;&#x4E48;&#x9996;&#x5148;&#x4E86;&#x89E3; manifest &#x662F;&#x4E2A;&#x597D;&#x7684;&#x5F00;&#x59CB;&#x3002;</p>
+<p>&#x901A;&#x8FC7;&#x4F7F;&#x7528; <a href="https://github.com/danethurber/webpack-manifest-plugin" target="_blank"><code>WebpackManifestPlugin</code></a>&#xFF0C;&#x53EF;&#x4EE5;&#x76F4;&#x63A5;&#x5C06;&#x6570;&#x636E;&#x63D0;&#x53D6;&#x5230;&#x4E00;&#x4E2A; json &#x6587;&#x4EF6;&#xFF0C;&#x4EE5;&#x4F9B;&#x4F7F;&#x7528;&#x3002;</p>
+<p>&#x6211;&#x4EEC;&#x4E0D;&#x4F1A;&#x5728;&#x6B64;&#x5C55;&#x793A;&#x4E00;&#x4E2A;&#x5173;&#x4E8E;&#x5982;&#x4F55;&#x5728;&#x4F60;&#x7684;&#x9879;&#x76EE;&#x4E2D;&#x4F7F;&#x7528;&#x6B64;&#x63D2;&#x4EF6;&#x7684;&#x5B8C;&#x6574;&#x793A;&#x4F8B;&#xFF0C;&#x4F46;&#x662F;&#x4F60;&#x53EF;&#x4EE5;&#x4ED4;&#x7EC6;&#x6DF1;&#x5165;&#x9605;&#x8BFB; <a href="../concepts/manifest">manifest &#x7684;&#x6982;&#x5FF5;&#x9875;&#x9762;</a>&#xFF0C;&#x4EE5;&#x53CA;&#x901A;&#x8FC7;<a href="caching">&#x7F13;&#x5B58;&#x6307;&#x5357;</a>&#x6765;&#x5F04;&#x6E05;&#x5982;&#x4F55;&#x4E0E;&#x957F;&#x671F;&#x7F13;&#x5B58;&#x76F8;&#x5173;&#x8054;&#x3002;</p>
+<h2 id="&#x7ED3;&#x8BBA;">&#x7ED3;&#x8BBA;</h2>
+<p>&#x73B0;&#x5728;&#xFF0C;&#x4F60;&#x5DF2;&#x7ECF;&#x4E86;&#x89E3;&#x5982;&#x4F55;&#x5411; HTML &#x52A8;&#x6001;&#x6DFB;&#x52A0; bundle&#xFF0C;&#x8BA9;&#x6211;&#x4EEC;&#x6DF1;&#x5165;&#x4E0B;&#x4E00;&#x8282;<a href="development"><code>&#x5F00;&#x53D1;&#x6307;&#x5357;</code></a>&#x3002;&#x5982;&#x679C;&#x4F60;&#x60F3;&#x8981;&#x6DF1;&#x5165;&#x66F4;&#x591A;&#x76F8;&#x5173;&#x9AD8;&#x7EA7;&#x8BDD;&#x9898;&#xFF0C;&#x6211;&#x4EEC;&#x63A8;&#x8350;&#x4F60;&#x524D;&#x5F80;<a href="code-splitting"><code>&#x4EE3;&#x7801;&#x5206;&#x79BB;&#x6307;&#x5357;</code></a>&#x3002;</p>
+<hr>
+<blockquote>
+<p>&#x539F;&#x6587;&#xFF1A;<a href="https://webpack.js.org/guides/output-management/" target="_blank">https://webpack.js.org/guides/output-management/</a></p>
+</blockquote>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="asset-management.html" class="navigation navigation-prev " aria-label="Previous page: 管理资源">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="development.html" class="navigation navigation-next " aria-label="Next page: 开发">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"管理输出","sort":4,"contributors":["skipjack","TheDutchCoder"],"level":"1.3.4","depth":2,"next":{"title":"开发","level":"1.3.5","depth":2,"path":"guides/development.md","ref":"guides/development.md","articles":[]},"previous":{"title":"管理资源","level":"1.3.3","depth":2,"path":"guides/asset-management.md","ref":"guides/asset-management.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"guides/output-management.md","mtime":"2017-07-25T19:18:26.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-07-31T07:40:32.889Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

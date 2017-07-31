@@ -1,0 +1,694 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>文件清单(Manifest) · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.2">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="targets.html" />
+    
+    
+    <link rel="prev" href="dependency-graph.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    第一部分：概念
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="entry-points.html">
+            
+                <a href="entry-points.html">
+            
+                    
+                    入口起点(Entry Points)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="output.html">
+            
+                <a href="output.html">
+            
+                    
+                    输出(Output)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="loaders.html">
+            
+                <a href="loaders.html">
+            
+                    
+                    加载器(Loaders)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="plugins.html">
+            
+                <a href="plugins.html">
+            
+                    
+                    插件(Plugins)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="configuration.html">
+            
+                <a href="configuration.html">
+            
+                    
+                    配置(Configuration)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6" data-path="modules.html">
+            
+                <a href="modules.html">
+            
+                    
+                    模块(Modules)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7" data-path="module-resolution.html">
+            
+                <a href="module-resolution.html">
+            
+                    
+                    模块解析(Module Resolution)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.8" data-path="dependency-graph.html">
+            
+                <a href="dependency-graph.html">
+            
+                    
+                    依赖图表(Dependency Graph)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.2.9" data-path="manifest.html">
+            
+                <a href="manifest.html">
+            
+                    
+                    文件清单(Manifest)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.10" data-path="targets.html">
+            
+                <a href="targets.html">
+            
+                    
+                    构建目标(Targets)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.11" data-path="hot-module-replacement.html">
+            
+                <a href="hot-module-replacement.html">
+            
+                    
+                    模块热替换(Hot Module Replacement)
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../guides/">
+            
+                <a href="../guides/">
+            
+                    
+                    第二部分：指南
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../guides/installation.html">
+            
+                <a href="../guides/installation.html">
+            
+                    
+                    安装
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../guides/getting-started.html">
+            
+                <a href="../guides/getting-started.html">
+            
+                    
+                    起步
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../guides/asset-management.html">
+            
+                <a href="../guides/asset-management.html">
+            
+                    
+                    管理资源
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="../guides/output-management.html">
+            
+                <a href="../guides/output-management.html">
+            
+                    
+                    管理输出
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="../guides/development.html">
+            
+                <a href="../guides/development.html">
+            
+                    
+                    开发
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6" data-path="../guides/hot-module-replacement.html">
+            
+                <a href="../guides/hot-module-replacement.html">
+            
+                    
+                    模块热替换
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7" data-path="../guides/production.html">
+            
+                <a href="../guides/production.html">
+            
+                    
+                    生产环境构建
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.8" data-path="../guides/tree-shaking.html">
+            
+                <a href="../guides/tree-shaking.html">
+            
+                    
+                    Tree shaking
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.9" data-path="../guides/code-splitting.html">
+            
+                <a href="../guides/code-splitting.html">
+            
+                    
+                    代码分离(Code Splitting)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.10" data-path="../guides/lazy-loading.html">
+            
+                <a href="../guides/lazy-loading.html">
+            
+                    
+                    懒加载(Lazy Loading)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.11" data-path="../guides/caching.html">
+            
+                <a href="../guides/caching.html">
+            
+                    
+                    缓存(Caching)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.12" data-path="../guides/author-libraries.html">
+            
+                <a href="../guides/author-libraries.html">
+            
+                    
+                    创建库(Library)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.13" data-path="../guides/shimming.html">
+            
+                <a href="../guides/shimming.html">
+            
+                    
+                    Shimming
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.14" data-path="../guides/typescript.html">
+            
+                <a href="../guides/typescript.html">
+            
+                    
+                    TypeScript
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.15" data-path="../guides/migrating.html">
+            
+                <a href="../guides/migrating.html">
+            
+                    
+                    从 v1 迁移到 v2
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.16" data-path="../guides/environment-variables.html">
+            
+                <a href="../guides/environment-variables.html">
+            
+                    
+                    使用环境变量
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.17" data-path="../guides/development-vagrant.html">
+            
+                <a href="../guides/development-vagrant.html">
+            
+                    
+                    开发 - Vagrant
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.18" data-path="../guides/dependency-management.html">
+            
+                <a href="../guides/dependency-management.html">
+            
+                    
+                    管理依赖
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.19" data-path="../guides/public-path.html">
+            
+                <a href="../guides/public-path.html">
+            
+                    
+                    Public Path(公共路径)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.20" data-path="../guides/integrations.html">
+            
+                <a href="../guides/integrations.html">
+            
+                    
+                    集成(Integrations)
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >文件清单(Manifest)</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <p>&#x5728;&#x4F7F;&#x7528; webpack &#x6784;&#x5EFA;&#x7684;&#x5178;&#x578B;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x6216;&#x7AD9;&#x70B9;&#x4E2D;&#xFF0C;&#x6709;&#x4E09;&#x79CD;&#x4E3B;&#x8981;&#x7684;&#x4EE3;&#x7801;&#x7C7B;&#x578B;&#xFF1A;</p>
+<ol>
+<li>&#x4F60;&#x6216;&#x4F60;&#x7684;&#x56E2;&#x961F;&#x7F16;&#x5199;&#x7684;&#x6E90;&#x7801;&#x3002;</li>
+<li>&#x4F60;&#x7684;&#x6E90;&#x7801;&#x4F1A;&#x4F9D;&#x8D56;&#x7684;&#x4EFB;&#x4F55;&#x7B2C;&#x4E09;&#x65B9;&#x7684; library &#x6216; &quot;vendor&quot; &#x4EE3;&#x7801;&#x3002;</li>
+<li>webpack &#x7684; runtime &#x548C; <em>manifest</em>&#xFF0C;&#x7BA1;&#x7406;&#x6240;&#x6709;&#x6A21;&#x5757;&#x7684;&#x4EA4;&#x4E92;&#x3002;</li>
+</ol>
+<p>&#x672C;&#x6587;&#x5C06;&#x91CD;&#x70B9;&#x4ECB;&#x7ECD;&#x8FD9;&#x4E09;&#x4E2A;&#x90E8;&#x5206;&#x4E2D;&#x7684;&#x6700;&#x540E;&#x90E8;&#x5206;&#xFF0C;runtime &#x548C; manifest&#x3002;</p>
+<h2 id="runtime">Runtime</h2>
+<p>&#x5982;&#x4E0A;&#x6240;&#x8FF0;&#xFF0C;&#x6211;&#x4EEC;&#x8FD9;&#x91CC;&#x53EA;&#x7B80;&#x7565;&#x5730;&#x4ECB;&#x7ECD;&#x4E00;&#x4E0B;&#x3002;runtime&#xFF0C;&#x4EE5;&#x53CA;&#x4F34;&#x968F;&#x7684; manifest &#x6570;&#x636E;&#xFF0C;&#x4E3B;&#x8981;&#x662F;&#x6307;&#xFF1A;&#x5728;&#x6D4F;&#x89C8;&#x5668;&#x8FD0;&#x884C;&#x65F6;&#xFF0C;webpack &#x7528;&#x6765;&#x8FDE;&#x63A5;&#x6A21;&#x5757;&#x5316;&#x7684;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x7684;&#x6240;&#x6709;&#x4EE3;&#x7801;&#x3002;runtime &#x5305;&#x542B;&#xFF1A;&#x5728;&#x6A21;&#x5757;&#x4EA4;&#x4E92;&#x65F6;&#xFF0C;&#x8FDE;&#x63A5;&#x6A21;&#x5757;&#x6240;&#x9700;&#x7684;&#x52A0;&#x8F7D;&#x548C;&#x89E3;&#x6790;&#x903B;&#x8F91;&#x3002;&#x5305;&#x62EC;&#x6D4F;&#x89C8;&#x5668;&#x4E2D;&#x7684;&#x5DF2;&#x52A0;&#x8F7D;&#x6A21;&#x5757;&#x7684;&#x8FDE;&#x63A5;&#xFF0C;&#x4EE5;&#x53CA;&#x61D2;&#x52A0;&#x8F7D;&#x6A21;&#x5757;&#x7684;&#x6267;&#x884C;&#x903B;&#x8F91;&#x3002;</p>
+<h2 id="manifest">Manifest</h2>
+<p>&#x90A3;&#x4E48;&#xFF0C;&#x4E00;&#x65E6;&#x4F60;&#x7684;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x4E2D;&#xFF0C;&#x5F62;&#x5982; <code>index.html</code> &#x6587;&#x4EF6;&#x3001;&#x4E00;&#x4E9B; bundle &#x548C;&#x5404;&#x79CD;&#x8D44;&#x6E90;&#x52A0;&#x8F7D;&#x5230;&#x6D4F;&#x89C8;&#x5668;&#x4E2D;&#xFF0C;&#x4F1A;&#x53D1;&#x751F;&#x4EC0;&#x4E48;&#xFF1F;&#x4F60;&#x7CBE;&#x5FC3;&#x5B89;&#x6392;&#x7684; <code>/src</code> &#x76EE;&#x5F55;&#x7684;&#x6587;&#x4EF6;&#x7ED3;&#x6784;&#x73B0;&#x5728;&#x5DF2;&#x7ECF;&#x4E0D;&#x5B58;&#x5728;&#xFF0C;&#x6240;&#x4EE5; webpack &#x5982;&#x4F55;&#x7BA1;&#x7406;&#x6240;&#x6709;&#x6A21;&#x5757;&#x4E4B;&#x95F4;&#x7684;&#x4EA4;&#x4E92;&#x5462;&#xFF1F;&#x8FD9;&#x5C31;&#x662F; manifest &#x6570;&#x636E;&#x7528;&#x9014;&#x7684;&#x7531;&#x6765;&#x2026;&#x2026;</p>
+<p>&#x5F53;&#x7F16;&#x8BD1;&#x5668;(compiler)&#x5F00;&#x59CB;&#x6267;&#x884C;&#x3001;&#x89E3;&#x6790;&#x548C;&#x6620;&#x5C04;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x65F6;&#xFF0C;&#x5B83;&#x4F1A;&#x4FDD;&#x7559;&#x6240;&#x6709;&#x6A21;&#x5757;&#x7684;&#x8BE6;&#x7EC6;&#x8981;&#x70B9;&#x3002;&#x8FD9;&#x4E2A;&#x6570;&#x636E;&#x96C6;&#x5408;&#x79F0;&#x4E3A; &quot;Manifest&quot;&#xFF0C;&#x5F53;&#x5B8C;&#x6210;&#x6253;&#x5305;&#x5E76;&#x53D1;&#x9001;&#x5230;&#x6D4F;&#x89C8;&#x5668;&#x65F6;&#xFF0C;&#x4F1A;&#x5728;&#x8FD0;&#x884C;&#x65F6;&#x901A;&#x8FC7; Manifest &#x6765;&#x89E3;&#x6790;&#x548C;&#x52A0;&#x8F7D;&#x6A21;&#x5757;&#x3002;&#x65E0;&#x8BBA;&#x4F60;&#x9009;&#x62E9;&#x54EA;&#x79CD;<a href="../api/module-methods">&#x6A21;&#x5757;&#x8BED;&#x6CD5;</a>&#xFF0C;&#x90A3;&#x4E9B; <code>import</code> &#x6216; <code>require</code> &#x8BED;&#x53E5;&#x73B0;&#x5728;&#x90FD;&#x5DF2;&#x7ECF;&#x8F6C;&#x6362;&#x4E3A; <code>__webpack_require__</code> &#x65B9;&#x6CD5;&#xFF0C;&#x6B64;&#x65B9;&#x6CD5;&#x6307;&#x5411;&#x6A21;&#x5757;&#x6807;&#x8BC6;&#x7B26;(module identifier)&#x3002;&#x901A;&#x8FC7;&#x4F7F;&#x7528; manifest &#x4E2D;&#x7684;&#x6570;&#x636E;&#xFF0C;runtime &#x5C06;&#x80FD;&#x591F;&#x67E5;&#x8BE2;&#x6A21;&#x5757;&#x6807;&#x8BC6;&#x7B26;&#xFF0C;&#x68C0;&#x7D22;&#x51FA;&#x80CC;&#x540E;&#x5BF9;&#x5E94;&#x7684;&#x6A21;&#x5757;&#x3002;</p>
+<h2 id="&#x95EE;&#x9898;">&#x95EE;&#x9898;</h2>
+<p>&#x6240;&#x4EE5;&#xFF0C;&#x73B0;&#x5728;&#x4F60;&#x5E94;&#x8BE5;&#x5BF9; webpack &#x5728;&#x5E55;&#x540E;&#x5DE5;&#x4F5C;&#x6709;&#x4E00;&#x70B9;&#x4E86;&#x89E3;&#x3002;&#x201C;&#x4F46;&#x662F;&#xFF0C;&#x8FD9;&#x5BF9;&#x6211;&#x6709;&#x4EC0;&#x4E48;&#x5F71;&#x54CD;&#x5462;&#xFF1F;&#x201D;&#xFF0C;&#x4F60;&#x53EF;&#x80FD;&#x4F1A;&#x95EE;&#x3002;&#x7B54;&#x6848;&#x662F;&#x5927;&#x591A;&#x6570;&#x60C5;&#x51B5;&#x4E0B;&#x6CA1;&#x6709;&#x3002;runtime &#x505A;&#x81EA;&#x5DF1;&#x8BE5;&#x505A;&#x7684;&#xFF0C;&#x4F7F;&#x7528; manifest &#x6765;&#x6267;&#x884C;&#x5176;&#x64CD;&#x4F5C;&#xFF0C;&#x7136;&#x540E;&#xFF0C;&#x4E00;&#x65E6;&#x4F60;&#x7684;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x52A0;&#x8F7D;&#x5230;&#x6D4F;&#x89C8;&#x5668;&#x4E2D;&#xFF0C;&#x6240;&#x6709;&#x5185;&#x5BB9;&#x5C06;&#x5C55;&#x73B0;&#x51FA;&#x9B54;&#x5E7B;&#x822C;&#x8FD0;&#x884C;&#x3002;&#x7136;&#x800C;&#xFF0C;&#x5982;&#x679C;&#x4F60;&#x51B3;&#x5B9A;&#x901A;&#x8FC7;&#x4F7F;&#x7528;&#x6D4F;&#x89C8;&#x5668;&#x7F13;&#x5B58;&#x6765;&#x6539;&#x5584;&#x9879;&#x76EE;&#x7684;&#x6027;&#x80FD;&#xFF0C;&#x7406;&#x89E3;&#x8FD9;&#x4E00;&#x8FC7;&#x7A0B;&#x5C06;&#x7A81;&#x7136;&#x53D8;&#x5F97;&#x5C24;&#x4E3A;&#x91CD;&#x8981;&#x3002;</p>
+<p>&#x901A;&#x8FC7;&#x4F7F;&#x7528; bundle &#x8BA1;&#x7B97;&#x51FA;&#x5185;&#x5BB9;&#x6563;&#x5217;(content hash)&#x4F5C;&#x4E3A;&#x6587;&#x4EF6;&#x540D;&#x79F0;&#xFF0C;&#x8FD9;&#x6837;&#x5728;&#x5185;&#x5BB9;&#x6216;&#x6587;&#x4EF6;&#x4FEE;&#x6539;&#x65F6;&#xFF0C;&#x6D4F;&#x89C8;&#x5668;&#x4E2D;&#x5C06;&#x901A;&#x8FC7;&#x65B0;&#x7684;&#x5185;&#x5BB9;&#x6563;&#x5217;&#x6307;&#x5411;&#x65B0;&#x7684;&#x6587;&#x4EF6;&#xFF0C;&#x4ECE;&#x800C;&#x4F7F;&#x7F13;&#x5B58;&#x65E0;&#x6548;&#x3002;&#x4E00;&#x65E6;&#x4F60;&#x5F00;&#x59CB;&#x8FD9;&#x6837;&#x505A;&#xFF0C;&#x4F60;&#x4F1A;&#x7ACB;&#x5373;&#x6CE8;&#x610F;&#x5230;&#x4E00;&#x4E9B;&#x6709;&#x8DA3;&#x7684;&#x884C;&#x4E3A;&#x3002;&#x5373;&#x4F7F;&#x8868;&#x9762;&#x4E0A;&#x67D0;&#x4E9B;&#x5185;&#x5BB9;&#x6CA1;&#x6709;&#x4FEE;&#x6539;&#xFF0C;&#x8BA1;&#x7B97;&#x51FA;&#x7684;&#x54C8;&#x5E0C;&#x8FD8;&#x662F;&#x4F1A;&#x6539;&#x53D8;&#x3002;&#x8FD9;&#x662F;&#x56E0;&#x4E3A;&#xFF0C;runtime &#x548C; manifest &#x7684;&#x6CE8;&#x5165;&#x5728;&#x6BCF;&#x6B21;&#x6784;&#x5EFA;&#x90FD;&#x4F1A;&#x53D1;&#x751F;&#x53D8;&#x5316;&#x3002;</p>
+<p>&#x67E5;&#x770B;<em>&#x7BA1;&#x7406;&#x6784;&#x5EFA;&#x6587;&#x4EF6;</em>&#x6307;&#x5357;&#x7684; <a href="../guides/output-management#the-manifest">manifest &#x90E8;&#x5206;</a>&#xFF0C;&#x4E86;&#x89E3;&#x5982;&#x4F55;&#x63D0;&#x53D6; manifest&#xFF0C;&#x5E76;&#x9605;&#x8BFB;&#x4E0B;&#x9762;&#x7684;&#x6307;&#x5357;&#xFF0C;&#x4EE5;&#x4E86;&#x89E3;&#x66F4;&#x591A;&#x957F;&#x6548;&#x7F13;&#x5B58;&#x9519;&#x7EFC;&#x590D;&#x6742;&#x4E4B;&#x5904;&#x3002;</p>
+<hr>
+<blockquote>
+<p>&#x539F;&#x6587;&#xFF1A;<a href="https://webpack.js.org/concepts/manifest/" target="_blank">https://webpack.js.org/concepts/manifest/</a></p>
+</blockquote>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="dependency-graph.html" class="navigation navigation-prev " aria-label="Previous page: 依赖图表(Dependency Graph)">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="targets.html" class="navigation navigation-next " aria-label="Next page: 构建目标(Targets)">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"文件清单(Manifest)","sort":10,"contributors":["skipjack"],"related":[{"title":"分离 Manifest","url":"https://survivejs.com/webpack/optimizing/separating-manifest/"},{"title":"使用 webpack 提供可预测的长效缓存","url":"https://medium.com/webpack/predictable-long-term-caching-with-webpack-d3eee1d3fa31"},{"title":"缓存","url":"/guides/caching"}],"level":"1.2.9","depth":2,"next":{"title":"构建目标(Targets)","level":"1.2.10","depth":2,"path":"concepts/targets.md","ref":"concepts/targets.md","articles":[]},"previous":{"title":"依赖图表(Dependency Graph)","level":"1.2.8","depth":2,"path":"concepts/dependency-graph.md","ref":"concepts/dependency-graph.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"concepts/manifest.md","mtime":"2017-07-25T19:18:26.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-07-31T07:40:32.889Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
